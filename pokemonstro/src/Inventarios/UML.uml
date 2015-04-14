@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_jRX3sN8SEeStJ7k7DPUcRg" name="Model">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_jRX3sd8SEeStJ7k7DPUcRg">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Class" xmi:id="_oiX3QN8SEeStJ7k7DPUcRg" name="InventarioPokemonstros" isAbstract="true">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_4zFssN8SEeStJ7k7DPUcRg" name="pokebolas" visibility="private" type="_SzyOcN8TEeStJ7k7DPUcRg"/>
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_MTmV8OHnEeSEAfCkKAjVKw" client="_oiX3QN8SEeStJ7k7DPUcRg" supplier="_zu54IOHmEeSEAfCkKAjVKw" contract="_zu54IOHmEeSEAfCkKAjVKw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_SzyOcN8TEeStJ7k7DPUcRg" name="ArrayList&lt;pokemonstro>">
+    <nestedClassifier xmi:type="uml:Class" xmi:id="_e5Y1QOH7EeSDAZ7TA1lBHA" name="JButton"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_t8sVcN8TEeStJ7k7DPUcRg" name="pokemonstro" isAbstract="true"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_kPkd8N8VEeStJ7k7DPUcRg" name="InventarioItens">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_nix7IN8VEeStJ7k7DPUcRg" name="Whey" visibility="private"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_1eUo8N8VEeStJ7k7DPUcRg" name="Suplemento" visibility="private"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_IxQSMN8WEeStJ7k7DPUcRg" name="Anabol" visibility="private"/>
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_7gkG8OGAEeSGYOcmz0WhCQ" name="Itens" aggregation="composite"/>
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_HdGggOF4EeSGYOcmz0WhCQ" client="_kPkd8N8VEeStJ7k7DPUcRg" supplier="_y7nO4OF2EeSGYOcmz0WhCQ" contract="_y7nO4OF2EeSGYOcmz0WhCQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_NGdQgN8ZEeStJ7k7DPUcRg" name="PoteDeWhey">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_YpdCUOF5EeSGYOcmz0WhCQ" name="quantidade" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_f0-N0OF5EeSGYOcmz0WhCQ" client="_NGdQgN8ZEeStJ7k7DPUcRg" supplier="_IMOa4OF5EeSGYOcmz0WhCQ" contract="_IMOa4OF5EeSGYOcmz0WhCQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_V1oxsN8aEeStJ7k7DPUcRg" name="Suplemento">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_YWtsgOF5EeSGYOcmz0WhCQ" name="quantidade" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_gc_QEOF5EeSGYOcmz0WhCQ" client="_V1oxsN8aEeStJ7k7DPUcRg" supplier="_IMOa4OF5EeSGYOcmz0WhCQ" contract="_IMOa4OF5EeSGYOcmz0WhCQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_WJHHUN8aEeStJ7k7DPUcRg" name="Anabol">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_Yz4JoOF5EeSGYOcmz0WhCQ" name="quantidade" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_RK-24OF_EeSGYOcmz0WhCQ" client="_WJHHUN8aEeStJ7k7DPUcRg" supplier="_IMOa4OF5EeSGYOcmz0WhCQ" contract="_IMOa4OF5EeSGYOcmz0WhCQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_y7nO4OF2EeSGYOcmz0WhCQ" name="IInventarioItens">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_c2MnMN8WEeStJ7k7DPUcRg" name="setItem">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_q3-gcOH2EeSDAZ7TA1lBHA" name="quantidade">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_jplmkN8WEeStJ7k7DPUcRg" name="getItem">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_mSvaIN8WEeStJ7k7DPUcRg" name="tipo">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_hsDcgOF_EeSGYOcmz0WhCQ" name="loadInvetarioItens"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Realization" xmi:id="_n7NAAOF3EeSGYOcmz0WhCQ">
+    <client xmi:type="uml:Class" href="../GUISoundKeyboard/components.uml#_Y3NjYOEqEeS_KaNFQrLm4Q"/>
+    <supplier xmi:type="uml:Interface" href="../GUISoundKeyboard/components.uml#_9C-AYOEpEeS_KaNFQrLm4Q"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Realization" xmi:id="_oDjDsOF3EeSGYOcmz0WhCQ">
+    <client xmi:type="uml:Class" href="../GUISoundKeyboard/components.uml#_Y3NjYOEqEeS_KaNFQrLm4Q"/>
+    <supplier xmi:type="uml:Interface" href="../GUISoundKeyboard/components.uml#_9C-AYOEpEeS_KaNFQrLm4Q"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Realization" xmi:id="_sF_lcOF3EeSGYOcmz0WhCQ">
+    <client xmi:type="uml:Class" href="../GUISoundKeyboard/components.uml#_Y3NjYOEqEeS_KaNFQrLm4Q"/>
+    <supplier xmi:type="uml:Interface" href="../GUISoundKeyboard/components.uml#_9C-AYOEpEeS_KaNFQrLm4Q"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Realization" xmi:id="_sNacEOF3EeSGYOcmz0WhCQ">
+    <client xmi:type="uml:Class" href="../GUISoundKeyboard/components.uml#_Y3NjYOEqEeS_KaNFQrLm4Q"/>
+    <supplier xmi:type="uml:Interface" href="../GUISoundKeyboard/components.uml#_9C-AYOEpEeS_KaNFQrLm4Q"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Realization" xmi:id="_szC4sOF3EeSGYOcmz0WhCQ">
+    <client xmi:type="uml:Class" href="../GUISoundKeyboard/components.uml#_Y3NjYOEqEeS_KaNFQrLm4Q"/>
+    <supplier xmi:type="uml:Interface" href="../GUISoundKeyboard/components.uml#_9C-AYOEpEeS_KaNFQrLm4Q"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_LDeKQOF4EeSGYOcmz0WhCQ" name="IInvetariosGUI">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_m0pyMOF4EeSGYOcmz0WhCQ" name="show"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_sJvAgOF4EeSGYOcmz0WhCQ" name="close"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_2lAFgOF4EeSGYOcmz0WhCQ" name="enableAllComponents"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_AzD08OF5EeSGYOcmz0WhCQ" name="initializeButtons"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_mLtCMOGAEeSGYOcmz0WhCQ" name="updateGUI"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_IMOa4OF5EeSGYOcmz0WhCQ" name="IItem">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_coIZMN8aEeStJ7k7DPUcRg" name="usar">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_xE4xQN8aEeStJ7k7DPUcRg" name="pokemon" type="_t8sVcN8TEeStJ7k7DPUcRg"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_yRpfUN8aEeStJ7k7DPUcRg" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_HkDCwN8XEeStJ7k7DPUcRg" name="setQuantidade">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_Ld1XwN8XEeStJ7k7DPUcRg" name="quantidade">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_9yYpgN8YEeStJ7k7DPUcRg" name="getQuantidade">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_AwyUUN8ZEeStJ7k7DPUcRg" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_fOp34OF9EeSGYOcmz0WhCQ" name="InventarioPokemonstrosGUI">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_CsYM8OH7EeSDAZ7TA1lBHA" name="iBackground" visibility="private"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_GuLOcOH7EeSDAZ7TA1lBHA" name="pokemonstros" visibility="private" type="_e5Y1QOH7EeSDAZ7TA1lBHA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gnWy8OH7EeSDAZ7TA1lBHA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gnWy8eH7EeSDAZ7TA1lBHA" value="*"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_qYUWsOH7EeSDAZ7TA1lBHA" name="pBackground" visibility="private"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_1RQ2MOH7EeSDAZ7TA1lBHA" name="lBackground" visibility="private"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_4Z1JoOH7EeSDAZ7TA1lBHA" name="pBackground" visibility="private"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_DhOU0OH8EeSDAZ7TA1lBHA" name="pPokemonstrosButtons" visibility="private"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_LVbQ8OH8EeSDAZ7TA1lBHA" name="inventario" visibility="private" type="_oiX3QN8SEeStJ7k7DPUcRg"/>
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_0al0sOF-EeSGYOcmz0WhCQ" client="_fOp34OF9EeSGYOcmz0WhCQ" supplier="_LDeKQOF4EeSGYOcmz0WhCQ" contract="_LDeKQOF4EeSGYOcmz0WhCQ"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_mEDpcOF9EeSGYOcmz0WhCQ" name="InvetarioPokemonstros">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_0emncOF9EeSGYOcmz0WhCQ" name="xLocation">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_8R8A4OF9EeSGYOcmz0WhCQ" name="yLocation">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="__nYK4OH6EeSDAZ7TA1lBHA" name="inventarioPokemonstros" type="_oiX3QN8SEeStJ7k7DPUcRg"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_XvdtAOF-EeSGYOcmz0WhCQ" name="InvetarioItensGUI">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_94YkYOH4EeSDAZ7TA1lBHA" name="iBackground" visibility="private"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_ClGLIOH5EeSDAZ7TA1lBHA" name="iPoteWhey" visibility="private"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_Fa4sgOH5EeSDAZ7TA1lBHA" name="iSuplemento" visibility="private"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_LuRWIOH5EeSDAZ7TA1lBHA" name="iAnabol" visibility="private"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_NlCDcOH5EeSDAZ7TA1lBHA" name="bPoteWhey" visibility="private"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_Rf-PAOH5EeSDAZ7TA1lBHA" name="bSuplemento" visibility="private"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_UkhlIOH5EeSDAZ7TA1lBHA" name="bAnabol" visibility="private"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_aAzAkOH5EeSDAZ7TA1lBHA" name="pBackground" visibility="private"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_l7l-oOH5EeSDAZ7TA1lBHA" name="pItensButtons" visibility="private"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_um0pYOH5EeSDAZ7TA1lBHA" name="lBackground" visibility="private"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_-XzO0OH5EeSDAZ7TA1lBHA" name="enter" visibility="private"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_DdFtoOH6EeSDAZ7TA1lBHA" name="nButton" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_I70AIOH6EeSDAZ7TA1lBHA" name="itensButtons" visibility="private"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_gK6kAOH6EeSDAZ7TA1lBHA" name="inventario" visibility="private" type="_kPkd8N8VEeStJ7k7DPUcRg"/>
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_xlOxIOF-EeSGYOcmz0WhCQ" client="_XvdtAOF-EeSGYOcmz0WhCQ" supplier="_LDeKQOF4EeSGYOcmz0WhCQ" contract="_LDeKQOF4EeSGYOcmz0WhCQ"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_fWbeYOF-EeSGYOcmz0WhCQ" name="InvetarioGUI">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_puvWAOF-EeSGYOcmz0WhCQ" name="xLocation">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_s1rRwOF-EeSGYOcmz0WhCQ" name="yLocation">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_m-VYkOH6EeSDAZ7TA1lBHA" name="inventario" type="_kPkd8N8VEeStJ7k7DPUcRg"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_ovtWYOGIEeSGYOcmz0WhCQ" name="InventarioItensComponent">
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_toCXQOGIEeSGYOcmz0WhCQ" name="IItens" type="_IMOa4OF5EeSGYOcmz0WhCQ" aggregation="composite"/>
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_Q6QNcOHmEeSEAfCkKAjVKw" name="IInventario" type="_y7nO4OF2EeSGYOcmz0WhCQ" aggregation="composite"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_4FP9AOGIEeSGYOcmz0WhCQ" name="Realization0" client="_toCXQOGIEeSGYOcmz0WhCQ" supplier="_IMOa4OF5EeSGYOcmz0WhCQ" contract="_IMOa4OF5EeSGYOcmz0WhCQ"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_4yO-0OGIEeSGYOcmz0WhCQ" name="InventarioItensGUIComponent">
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_9KbuIOGIEeSGYOcmz0WhCQ" name="IInventarioItens" type="_y7nO4OF2EeSGYOcmz0WhCQ" aggregation="composite"/>
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_u_mKoOGJEeSGYOcmz0WhCQ" name="BD" aggregation="composite">
+      <type xmi:type="uml:Interface" href="../GUISoundKeyboard/components.uml#_Ub9hsODKEeSBF46eZCLUnQ"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_gdfm8OHoEeSEAfCkKAjVKw" name="IInventariosGUI" type="_LDeKQOF4EeSGYOcmz0WhCQ" aggregation="composite"/>
+    <nestedClassifier xmi:type="uml:Interface" xmi:id="_u_mKouGJEeSGYOcmz0WhCQ" name="IDB"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_u_mKoeGJEeSGYOcmz0WhCQ" name="Usage0" client="_u_mKoOGJEeSGYOcmz0WhCQ" supplier="_u_mKouGJEeSGYOcmz0WhCQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_PPBCYOHgEeSEAfCkKAjVKw" name="InventarioPokemonstrosComponent">
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_S2BhIOHnEeSEAfCkKAjVKw" name="IInvetarioPokemonstros" type="_zu54IOHmEeSEAfCkKAjVKw" aggregation="composite"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_DYX80OHmEeSEAfCkKAjVKw" name="Usage1" client="_9KbuIOGIEeSGYOcmz0WhCQ" supplier="_y7nO4OF2EeSGYOcmz0WhCQ"/>
+  <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_pX8EUOHmEeSEAfCkKAjVKw" name="Realization1" client="_Q6QNcOHmEeSEAfCkKAjVKw" supplier="_y7nO4OF2EeSGYOcmz0WhCQ" contract="_y7nO4OF2EeSGYOcmz0WhCQ"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_zu54IOHmEeSEAfCkKAjVKw" name="IInventarioPokemonstros">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_7XXeUOHmEeSEAfCkKAjVKw" name="ordenar">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_7XXeUeHmEeSEAfCkKAjVKw" name="primeiroPosicao">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_7XXeUuHmEeSEAfCkKAjVKw" name="segundoPosicao">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_7XhPUOHmEeSEAfCkKAjVKw" name="adicionar">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_7XhPUeHmEeSEAfCkKAjVKw" name="pokemon" type="_t8sVcN8TEeStJ7k7DPUcRg"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_7XhPUuHmEeSEAfCkKAjVKw" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_7XhPU-HmEeSEAfCkKAjVKw" name="retirar">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_7XhPVOHmEeSEAfCkKAjVKw" name="posicao">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_7XhPVeHmEeSEAfCkKAjVKw" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_7XhPVuHmEeSEAfCkKAjVKw" name="getPokemonstro">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_7XhPV-HmEeSEAfCkKAjVKw" name="posicao">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_7XhPWOHmEeSEAfCkKAjVKw" type="_t8sVcN8TEeStJ7k7DPUcRg" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_7XhPWeHmEeSEAfCkKAjVKw" name="loadInventarioPokemontros"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_pTKckOHnEeSEAfCkKAjVKw" name="InventarioPokemontrosGUIComponent">
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_vx3lYOHnEeSEAfCkKAjVKw" name="IInventarioPokemonstros" type="_zu54IOHmEeSEAfCkKAjVKw" aggregation="composite"/>
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_UnwvEOHoEeSEAfCkKAjVKw" name="IInventariosGUI" type="_LDeKQOF4EeSGYOcmz0WhCQ" aggregation="composite"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_EYdO4OHoEeSEAfCkKAjVKw" name="Realization2" client="_S2BhIOHnEeSEAfCkKAjVKw" supplier="_zu54IOHmEeSEAfCkKAjVKw" contract="_zu54IOHmEeSEAfCkKAjVKw"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_MBFNIOHoEeSEAfCkKAjVKw" name="Usage0" client="_vx3lYOHnEeSEAfCkKAjVKw" supplier="_zu54IOHmEeSEAfCkKAjVKw"/>
+  <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_rzfO0OHoEeSEAfCkKAjVKw" name="Realization3" client="_UnwvEOHoEeSEAfCkKAjVKw" supplier="_LDeKQOF4EeSGYOcmz0WhCQ" contract="_LDeKQOF4EeSGYOcmz0WhCQ"/>
+  <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_s34rEOHoEeSEAfCkKAjVKw" name="Realization4" client="_gdfm8OHoEeSEAfCkKAjVKw" supplier="_LDeKQOF4EeSGYOcmz0WhCQ" contract="_LDeKQOF4EeSGYOcmz0WhCQ"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_2htFAOHoEeSEAfCkKAjVKw" name="InventoryComponent">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_QjbhgOHpEeSEAfCkKAjVKw" name="InventarioItensGUIComponent" type="_4yO-0OGIEeSGYOcmz0WhCQ"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_ybluwOHpEeSEAfCkKAjVKw" name="InventarioItensComponent" type="_ovtWYOGIEeSGYOcmz0WhCQ"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_Abdi8OHqEeSEAfCkKAjVKw" name="InventarioPokemonstrosGUIComponent" type="_pTKckOHnEeSEAfCkKAjVKw"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_Og2JQOHqEeSEAfCkKAjVKw" name="InventarioPokemonstrosComponent" type="_PPBCYOHgEeSEAfCkKAjVKw"/>
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_YtV9AOHrEeSEAfCkKAjVKw" name="IInventariosGUI" type="_LDeKQOF4EeSGYOcmz0WhCQ" aggregation="composite"/>
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_4PIv0OHrEeSEAfCkKAjVKw" name="IInventarioItens" type="_y7nO4OF2EeSGYOcmz0WhCQ" aggregation="composite"/>
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_ASxZoOHtEeSEAfCkKAjVKw" name="IConexao" aggregation="composite"/>
+    <ownedConnector xmi:type="uml:Connector" xmi:id="_8XunwOHpEeSEAfCkKAjVKw" name="Connector1">
+      <end xmi:type="uml:ConnectorEnd" xmi:id="_8X4YwOHpEeSEAfCkKAjVKw" role="_QjbhgOHpEeSEAfCkKAjVKw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_8X4YweHpEeSEAfCkKAjVKw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_8YBisOHpEeSEAfCkKAjVKw" value="1"/>
+      </end>
+      <end xmi:type="uml:ConnectorEnd" xmi:id="_8YBiseHpEeSEAfCkKAjVKw" role="_ybluwOHpEeSEAfCkKAjVKw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_8YBisuHpEeSEAfCkKAjVKw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_8YBis-HpEeSEAfCkKAjVKw" value="1"/>
+      </end>
+    </ownedConnector>
+    <ownedConnector xmi:type="uml:Connector" xmi:id="_WFSyIOHqEeSEAfCkKAjVKw" name="Connector2">
+      <end xmi:type="uml:ConnectorEnd" xmi:id="_WFSyIeHqEeSEAfCkKAjVKw" role="_Abdi8OHqEeSEAfCkKAjVKw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WFSyIuHqEeSEAfCkKAjVKw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WFSyI-HqEeSEAfCkKAjVKw" value="1"/>
+      </end>
+      <end xmi:type="uml:ConnectorEnd" xmi:id="_WFcjIOHqEeSEAfCkKAjVKw" role="_Og2JQOHqEeSEAfCkKAjVKw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WFcjIeHqEeSEAfCkKAjVKw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WFcjIuHqEeSEAfCkKAjVKw" value="1"/>
+      </end>
+    </ownedConnector>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_z0dUQOHrEeSEAfCkKAjVKw" name="Realization5" client="_YtV9AOHrEeSEAfCkKAjVKw" supplier="_LDeKQOF4EeSGYOcmz0WhCQ" contract="_LDeKQOF4EeSGYOcmz0WhCQ"/>
+  <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_QsFm4OHsEeSEAfCkKAjVKw" name="Realization6" client="_4PIv0OHrEeSEAfCkKAjVKw" supplier="_y7nO4OF2EeSGYOcmz0WhCQ" contract="_y7nO4OF2EeSGYOcmz0WhCQ"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_adDUMOH4EeSDAZ7TA1lBHA" name="IConexao">
+    <nestedClassifier xmi:type="uml:Interface" xmi:id="_adDUMeH4EeSDAZ7TA1lBHA" name="IConexao"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_adDUMuH4EeSDAZ7TA1lBHA" name="connect">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_adDUM-H4EeSDAZ7TA1lBHA" name="obj">
+        <type xmi:type="uml:Interface" href="../diagramas/model.uml#_In1TQ-FBEeSQt4RtM9xUKg"/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_fzHZ8OH4EeSDAZ7TA1lBHA" name="Usage2" client="_ASxZoOHtEeSEAfCkKAjVKw" supplier="_adDUMOH4EeSDAZ7TA1lBHA"/>
+  <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_2lS4EN8VEeStJ7k7DPUcRg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_2l-0kN8VEeStJ7k7DPUcRg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_sYse0YZLEeKyw49uR6nx3g"/>
+    </eAnnotations>
+    <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
+  </profileApplication>
+</uml:Model>
