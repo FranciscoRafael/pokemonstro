@@ -3,12 +3,6 @@
   <packageImport xmi:type="uml:PackageImport" xmi:id="_EkpxseFBEeSQt4RtM9xUKg">
     <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
   </packageImport>
-  <packagedElement xmi:type="uml:Interface" xmi:id="_In4WkOFBEeSQt4RtM9xUKg" name="IConexao">
-    <nestedClassifier xmi:type="uml:Interface" xmi:id="_In4WkeFBEeSQt4RtM9xUKg" name="IConexao"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_In4WkuFBEeSQt4RtM9xUKg" name="connect">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_In4Wk-FBEeSQt4RtM9xUKg" name="obj"/>
-    </ownedOperation>
-  </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_G8QyYOF6EeSseJlhwIOsyA" name="Compra">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_G8QyYeF6EeSseJlhwIOsyA" name="listaProdutos" visibility="private" type="_G8SAheF6EeSseJlhwIOsyA"/>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_G8QyYuF6EeSseJlhwIOsyA" name="precoCompra" visibility="private">
@@ -229,27 +223,22 @@
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_ZMVBsOGAEeSseJlhwIOsyA" name="ListaProdutoLoja">
     <generalization xmi:type="uml:Generalization" xmi:id="_inKmAOHkEeSEKqy94dL1dw" general="_FXBFsOHkEeSEKqy94dL1dw"/>
-    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_ZMVBtOGAEeSseJlhwIOsyA" client="_ZMVBsOGAEeSseJlhwIOsyA" supplier="_In4WkOFBEeSQt4RtM9xUKg" contract="_In4WkOFBEeSQt4RtM9xUKg"/>
-    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_nhOSYOF6EeSseJlhwIOsyA" client="_G8RZgOF6EeSseJlhwIOsyA _ZMVBsOGAEeSseJlhwIOsyA" supplier="_In4WkOFBEeSQt4RtM9xUKg" contract="_In4WkOFBEeSQt4RtM9xUKg"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_ZMVBteGAEeSseJlhwIOsyA" name="connect">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_ZMVBtuGAEeSseJlhwIOsyA" name="obj"/>
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_nhOSYOF6EeSseJlhwIOsyA" client="_G8RZgOF6EeSseJlhwIOsyA _ZMVBsOGAEeSseJlhwIOsyA" supplier="_dTfp8OIFEeSWTKoLjt3S8w" contract="_dTfp8OIFEeSWTKoLjt3S8w"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_C4afwOKpEeSGV_wEHwI-8A" name="connect">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_C4afweKpEeSGV_wEHwI-8A" name="nome" type="_2x2WkOKoEeSGV_wEHwI-8A"/>
     </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_viW9oOGCEeSseJlhwIOsyA" name="ListaProdutoJogador">
     <generalization xmi:type="uml:Generalization" xmi:id="_jHzN4OHkEeSEKqy94dL1dw" general="_FXBFsOHkEeSEKqy94dL1dw"/>
-    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_viW9pOGCEeSseJlhwIOsyA" client="_viW9oOGCEeSseJlhwIOsyA" supplier="_In4WkOFBEeSQt4RtM9xUKg" contract="_In4WkOFBEeSQt4RtM9xUKg"/>
-    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_viW9peGCEeSseJlhwIOsyA" client="_G8RZgOF6EeSseJlhwIOsyA _viW9oOGCEeSseJlhwIOsyA" supplier="_In4WkOFBEeSQt4RtM9xUKg" contract="_In4WkOFBEeSQt4RtM9xUKg"/>
-    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_zpbgsOGCEeSseJlhwIOsyA" client="_viW9oOGCEeSseJlhwIOsyA" supplier="_In4WkOFBEeSQt4RtM9xUKg _dTfp8OIFEeSWTKoLjt3S8w" contract="_dTfp8OIFEeSWTKoLjt3S8w"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_viW9puGCEeSseJlhwIOsyA" name="connect">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_viW9p-GCEeSseJlhwIOsyA" name="obj"/>
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_zpbgsOGCEeSseJlhwIOsyA" client="_viW9oOGCEeSseJlhwIOsyA" supplier="_dTfp8OIFEeSWTKoLjt3S8w" contract="_dTfp8OIFEeSWTKoLjt3S8w"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_B-mi4OKpEeSGV_wEHwI-8A" name="connect">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_B-mi4eKpEeSGV_wEHwI-8A" name="nome" type="_2x2WkOKoEeSGV_wEHwI-8A"/>
     </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_FXBFsOHkEeSEKqy94dL1dw" name="ListaProduto">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_FXBFseHkEeSEKqy94dL1dw" name="produtos" visibility="private" type="_R8CQAOHlEeSEKqy94dL1dw"/>
-    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_FXBFtOHkEeSEKqy94dL1dw" client="_FXBFsOHkEeSEKqy94dL1dw" supplier="_In4WkOFBEeSQt4RtM9xUKg" contract="_In4WkOFBEeSQt4RtM9xUKg"/>
-    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_FXBFteHkEeSEKqy94dL1dw" client="_G8RZgOF6EeSseJlhwIOsyA _FXBFsOHkEeSEKqy94dL1dw" supplier="_In4WkOFBEeSQt4RtM9xUKg" contract="_In4WkOFBEeSQt4RtM9xUKg"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_FXBFtuHkEeSEKqy94dL1dw" name="connect">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_FXBFt-HkEeSEKqy94dL1dw" name="obj"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_aDHF8OLDEeSvucJA23UodA" name="nome" type="_2x2WkOKoEeSGV_wEHwI-8A"/>
     </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_w6qEUOHlEeSEKqy94dL1dw" name="getProduto">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_8QDPQOHlEeSEKqy94dL1dw" name="nome">
@@ -260,14 +249,6 @@
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_R8CQAOHlEeSEKqy94dL1dw" name="List&lt;Produto>">
     <nestedClassifier xmi:type="uml:Class" xmi:id="_R8CQAeHlEeSEKqy94dL1dw" name="List&lt;ItemVenda>"/>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Interface" xmi:id="_GA-cIOH5EeS3_5GnumtvNQ" name="IItens">
-    <nestedClassifier xmi:type="uml:Interface" xmi:id="_GA-cIeH5EeS3_5GnumtvNQ" name="IConexao"/>
-    <nestedClassifier xmi:type="uml:Interface" xmi:id="_G0K-MOH6EeS3_5GnumtvNQ" name="IInventario"/>
-    <nestedClassifier xmi:type="uml:Interface" xmi:id="_NvId0OH9EeS3_5GnumtvNQ" name="IItens"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_GA-cIuH5EeS3_5GnumtvNQ" name="connect">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_GA-cI-H5EeS3_5GnumtvNQ" name="obj"/>
-    </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Interface" xmi:id="_JiEH0OH6EeS3_5GnumtvNQ" name="IVenda">
     <nestedClassifier xmi:type="uml:Interface" xmi:id="_JiEH0eH6EeS3_5GnumtvNQ" name="IMovimento"/>
@@ -407,7 +388,7 @@
       </ownedParameter>
     </ownedOperation>
   </packagedElement>
-  <packagedElement xmi:type="uml:Interface" xmi:id="_bcBMBeH6EeS3_5GnumtvNQ" name="IConexao">
+  <packagedElement xmi:type="uml:Interface" xmi:id="_bcBMBeH6EeS3_5GnumtvNQ" name="ICitens">
     <nestedClassifier xmi:type="uml:Interface" xmi:id="_bcBMBuH6EeS3_5GnumtvNQ" name="IConexao"/>
     <nestedClassifier xmi:type="uml:Interface" xmi:id="_bcBMB-H6EeS3_5GnumtvNQ" name="IInventario"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_bcBMCOH6EeS3_5GnumtvNQ" name="connect">
@@ -423,28 +404,28 @@
   </packagedElement>
   <packagedElement xmi:type="uml:Component" xmi:id="_eBnqUOH8EeS3_5GnumtvNQ" name="Compra">
     <ownedAttribute xmi:type="uml:Port" xmi:id="_-DJlwOH_EeS8cOdThLqgNQ" name="compra" type="_G8SnkOF6EeSseJlhwIOsyA" aggregation="composite"/>
-    <ownedAttribute xmi:type="uml:Port" xmi:id="_ENDjQOIAEeS8cOdThLqgNQ" name="banco de dados" type="_In4WkOFBEeSQt4RtM9xUKg" aggregation="composite"/>
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_ENDjQOIAEeS8cOdThLqgNQ" name="inventario" type="_dTfp8OIFEeSWTKoLjt3S8w" aggregation="composite"/>
     <ownedAttribute xmi:type="uml:Port" xmi:id="_SdcYUOIDEeSWTKoLjt3S8w" name="compra" type="_G8SnkOF6EeSseJlhwIOsyA" aggregation="composite"/>
-    <ownedAttribute xmi:type="uml:Port" xmi:id="_qViO0OIDEeSWTKoLjt3S8w" name="banco de dados" type="_In4WkOFBEeSQt4RtM9xUKg" aggregation="composite"/>
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_qViO0OIDEeSWTKoLjt3S8w" name="inventario" type="_dTfp8OIFEeSWTKoLjt3S8w" aggregation="composite"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Component" xmi:id="_HoGt0OIAEeS8cOdThLqgNQ" name="Venda">
     <ownedAttribute xmi:type="uml:Port" xmi:id="_HoGt0eIAEeS8cOdThLqgNQ" name="compra" type="_G8SAguF6EeSseJlhwIOsyA" aggregation="composite"/>
-    <ownedAttribute xmi:type="uml:Port" xmi:id="_HoGt0uIAEeS8cOdThLqgNQ" name="itens jogador" type="_GA-cIOH5EeS3_5GnumtvNQ" aggregation="composite"/>
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_HoGt0uIAEeS8cOdThLqgNQ" name="inventario" type="_dTfp8OIFEeSWTKoLjt3S8w" aggregation="composite"/>
     <ownedAttribute xmi:type="uml:Port" xmi:id="_FrXM8OIDEeSWTKoLjt3S8w" name="venda" type="_G8SAguF6EeSseJlhwIOsyA" aggregation="composite"/>
-    <ownedAttribute xmi:type="uml:Port" xmi:id="_njwDsOIDEeSWTKoLjt3S8w" name="inventario" type="_GA-cIOH5EeS3_5GnumtvNQ" aggregation="composite"/>
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_njwDsOIDEeSWTKoLjt3S8w" name="inventario" type="_dTfp8OIFEeSWTKoLjt3S8w" aggregation="composite"/>
     <packagedElement xmi:type="uml:Component" xmi:id="_SayNQOIAEeS8cOdThLqgNQ" name="Venda">
       <ownedAttribute xmi:type="uml:Port" xmi:id="_SayNQeIAEeS8cOdThLqgNQ" name="compra" type="_G8SAguF6EeSseJlhwIOsyA" aggregation="composite"/>
-      <ownedAttribute xmi:type="uml:Port" xmi:id="_SayNQuIAEeS8cOdThLqgNQ" name="itens jogador" type="_GA-cIOH5EeS3_5GnumtvNQ" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_SayNQuIAEeS8cOdThLqgNQ" name="itens jogador" aggregation="composite"/>
     </packagedElement>
   </packagedElement>
   <packagedElement xmi:type="uml:Component" xmi:id="_TCkmAOIAEeS8cOdThLqgNQ" name="Troca">
     <ownedAttribute xmi:type="uml:Port" xmi:id="_TCkmAeIAEeS8cOdThLqgNQ" name="troca" type="_G8SAl-F6EeSseJlhwIOsyA" aggregation="composite"/>
-    <ownedAttribute xmi:type="uml:Port" xmi:id="_TCkmAuIAEeS8cOdThLqgNQ" name="itens jogador" type="_GA-cIOH5EeS3_5GnumtvNQ" aggregation="composite"/>
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_TCkmAuIAEeS8cOdThLqgNQ" name="inventario" type="_dTfp8OIFEeSWTKoLjt3S8w" aggregation="composite"/>
     <ownedAttribute xmi:type="uml:Port" xmi:id="_TZM18OIDEeSWTKoLjt3S8w" name="troca" type="_ZXP30eH6EeS3_5GnumtvNQ" aggregation="composite"/>
-    <ownedAttribute xmi:type="uml:Port" xmi:id="_p75m0OIDEeSWTKoLjt3S8w" name="inventario" type="_GA-cIOH5EeS3_5GnumtvNQ" aggregation="composite"/>
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_p75m0OIDEeSWTKoLjt3S8w" name="inventario" type="_dTfp8OIFEeSWTKoLjt3S8w" aggregation="composite"/>
     <packagedElement xmi:type="uml:Component" xmi:id="_TCkmA-IAEeS8cOdThLqgNQ" name="Venda">
       <ownedAttribute xmi:type="uml:Port" xmi:id="_TCkmBOIAEeS8cOdThLqgNQ" name="compra" type="_G8SAguF6EeSseJlhwIOsyA" aggregation="composite"/>
-      <ownedAttribute xmi:type="uml:Port" xmi:id="_TCkmBeIAEeS8cOdThLqgNQ" name="itens jogador" type="_GA-cIOH5EeS3_5GnumtvNQ" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_TCkmBeIAEeS8cOdThLqgNQ" name="itens jogador" aggregation="composite"/>
     </packagedElement>
   </packagedElement>
   <packagedElement xmi:type="uml:Interface" xmi:id="_Z8GCkOIAEeS8cOdThLqgNQ" name="IVenda">
@@ -585,7 +566,7 @@
       </ownedParameter>
     </ownedOperation>
   </packagedElement>
-  <packagedElement xmi:type="uml:Interface" xmi:id="_eTWWsOIAEeS8cOdThLqgNQ" name="IItens">
+  <packagedElement xmi:type="uml:Interface" xmi:id="_eTWWsOIAEeS8cOdThLqgNQ" name="ICitens">
     <nestedClassifier xmi:type="uml:Interface" xmi:id="_eTWWseIAEeS8cOdThLqgNQ" name="IConexao"/>
     <nestedClassifier xmi:type="uml:Interface" xmi:id="_eTWWsuIAEeS8cOdThLqgNQ" name="IInventario"/>
     <nestedClassifier xmi:type="uml:Interface" xmi:id="_eTWWs-IAEeS8cOdThLqgNQ" name="IItens"/>
@@ -593,14 +574,14 @@
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_eTWWteIAEeS8cOdThLqgNQ" name="obj"/>
     </ownedOperation>
   </packagedElement>
-  <packagedElement xmi:type="uml:Interface" xmi:id="_ftWPgOIAEeS8cOdThLqgNQ" name="IConexao">
+  <packagedElement xmi:type="uml:Interface" xmi:id="_ftWPgOIAEeS8cOdThLqgNQ" name="ICitens">
     <nestedClassifier xmi:type="uml:Interface" xmi:id="_ftWPgeIAEeS8cOdThLqgNQ" name="IConexao"/>
     <nestedClassifier xmi:type="uml:Interface" xmi:id="_ftWPguIAEeS8cOdThLqgNQ" name="IInventario"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_ftWPg-IAEeS8cOdThLqgNQ" name="connect">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_ftWPhOIAEeS8cOdThLqgNQ" name="obj"/>
     </ownedOperation>
   </packagedElement>
-  <packagedElement xmi:type="uml:Interface" xmi:id="_ikCv0OIAEeS8cOdThLqgNQ" name="IItens">
+  <packagedElement xmi:type="uml:Interface" xmi:id="_ikCv0OIAEeS8cOdThLqgNQ" name="ICitens">
     <nestedClassifier xmi:type="uml:Interface" xmi:id="_ikCv0eIAEeS8cOdThLqgNQ" name="IConexao"/>
     <nestedClassifier xmi:type="uml:Interface" xmi:id="_ikCv0uIAEeS8cOdThLqgNQ" name="IInventario"/>
     <nestedClassifier xmi:type="uml:Interface" xmi:id="_ikCv0-IAEeS8cOdThLqgNQ" name="IItens"/>
@@ -617,13 +598,17 @@
   <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_O2eRoOIDEeSWTKoLjt3S8w" name="Realization4" client="_FrXM8OIDEeSWTKoLjt3S8w" supplier="_JiEH0OH6EeS3_5GnumtvNQ" contract="_JiEH0OH6EeS3_5GnumtvNQ"/>
   <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_eH2xAOIDEeSWTKoLjt3S8w" name="Realization5" client="_SdcYUOIDEeSWTKoLjt3S8w" supplier="_bcBL8eH6EeS3_5GnumtvNQ" contract="_bcBL8eH6EeS3_5GnumtvNQ"/>
   <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_gqOnIOIDEeSWTKoLjt3S8w" name="Realization6" client="_TZM18OIDEeSWTKoLjt3S8w" supplier="_ZXP30eH6EeS3_5GnumtvNQ" contract="_ZXP30eH6EeS3_5GnumtvNQ"/>
-  <packagedElement xmi:type="uml:Usage" xmi:id="__sVNQOIDEeSWTKoLjt3S8w" name="Usage1" client="_njwDsOIDEeSWTKoLjt3S8w" supplier="_GA-cIOH5EeS3_5GnumtvNQ"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="__sVNQOIDEeSWTKoLjt3S8w" name="Usage1" client="_njwDsOIDEeSWTKoLjt3S8w" supplier="_bcBMBeH6EeS3_5GnumtvNQ"/>
   <packagedElement xmi:type="uml:Usage" xmi:id="_Ahrg4OIEEeSWTKoLjt3S8w" name="Usage2" client="_qViO0OIDEeSWTKoLjt3S8w" supplier="_bcBMBeH6EeS3_5GnumtvNQ"/>
-  <packagedElement xmi:type="uml:Usage" xmi:id="_GY-rcOIEEeSWTKoLjt3S8w" name="Usage6" client="_p75m0OIDEeSWTKoLjt3S8w" supplier="_bcBMBeH6EeS3_5GnumtvNQ"/>
-  <packagedElement xmi:type="uml:Interface" xmi:id="_dTfp8OIFEeSWTKoLjt3S8w" name="IItens">
+  <packagedElement xmi:type="uml:Interface" xmi:id="_dTfp8OIFEeSWTKoLjt3S8w" name="ICitens">
     <nestedClassifier xmi:type="uml:Interface" xmi:id="_dTfp8eIFEeSWTKoLjt3S8w" name="IConexao"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_dTfp8uIFEeSWTKoLjt3S8w" name="connect">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_dTfp8-IFEeSWTKoLjt3S8w" name="obj"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_-nuGoOKoEeSGV_wEHwI-8A" name="nome" type="_2x2WkOKoEeSGV_wEHwI-8A"/>
     </ownedOperation>
   </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_2x2WkOKoEeSGV_wEHwI-8A" name="INome">
+    <nestedClassifier xmi:type="uml:Interface" xmi:id="_2x2WkeKoEeSGV_wEHwI-8A" name="IConexao"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_Mx6fAOKqEeSGV_wEHwI-8A" name="Usage0" client="_p75m0OIDEeSWTKoLjt3S8w" supplier="_bcBMBeH6EeS3_5GnumtvNQ"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_OfvSwOKqEeSGV_wEHwI-8A" name="Usage6" client="_njwDsOIDEeSWTKoLjt3S8w" supplier="_bcBMBeH6EeS3_5GnumtvNQ"/>
 </uml:Model>
