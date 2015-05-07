@@ -4,7 +4,6 @@ import java.awt.Image;
 import java.io.File;
 import java.io.IOException;
 import java.io.Serializable;
-
 import model.interfaces.IElement;
 import model.interfaces.IPlayer;
 import model.interfaces.IStorage;
@@ -13,7 +12,6 @@ import model.classes.element.*;
 import model.exceptions.NonexistentEntityException;
 import anima.annotation.Component;
 import anima.component.base.ComponentBase;
-
 import javax.imageio.ImageIO;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -28,13 +26,14 @@ import javax.persistence.criteria.CriteriaQuery;
 * @author Danilo Charantola
 */
 
-@Component(id="<pokemonstro.src.model.classes.PlayerBuilder>",
+@Component(id="<pokemonstro.src.model.classes.Storage>",
 		   provides={"<pokemonstro.src.model.interfaces.IStorage>"})
 public class Storage extends ComponentBase implements IStorage, Serializable{	
 	private static final long serialVersionUID = 1L;
 	/**
 	 * Uso de Singleton
 	 */
+	/*
 	Storage instance=null;
 	public Storage getInstance(){
 		if(instance!=null)
@@ -42,10 +41,9 @@ public class Storage extends ComponentBase implements IStorage, Serializable{
 		return instance;
 	}
 	private Storage() {}
-	
-	
-	private EntityManagerFactory emf = Persistence.createEntityManagerFactory("pokemonstroPU");
-    private EntityManager getEntityManager() {
+	*/
+	private EntityManager getEntityManager() {
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("pokemonstroPU");
         return emf.createEntityManager();
     }
     
@@ -123,7 +121,10 @@ public class Storage extends ComponentBase implements IStorage, Serializable{
             em.getTransaction().begin();
             em.persist(player);
             em.getTransaction().commit();
-        } finally {
+        } catch (Exception e){
+        	System.out.println("Erro: "+e.getMessage());
+        	e.printStackTrace();
+        }finally {
             if (em != null) {
                 em.close();
             }

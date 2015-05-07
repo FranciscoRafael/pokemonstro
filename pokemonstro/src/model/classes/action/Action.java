@@ -1,9 +1,7 @@
 package model.classes.action;
 
 import java.io.Serializable;
-
 import javax.persistence.*;
-
 import model.interfaces.IAction;
 import anima.component.base.ComponentBase;
 

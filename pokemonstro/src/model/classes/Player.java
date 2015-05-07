@@ -1,7 +1,6 @@
 package model.classes;
 
 import java.io.Serializable;
-
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -34,7 +33,15 @@ public class Player extends ComponentBase implements Serializable, IPlayer {
     private String position;
     @OneToOne(cascade= CascadeType.ALL)
     private Inventory inventory;
-
+    @OneToOne(cascade=CascadeType.ALL)
+    private City city;
+    
+    public void setCity(City city){
+    	this.city=city;
+    }
+    public City getCity(){
+    	return city;
+    }
     public IInventory getInventory() {
         return inventory;
     }

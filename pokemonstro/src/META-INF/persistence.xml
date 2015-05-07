@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
-  <persistence-unit name="pokemonstroJPAPU" transaction-type="RESOURCE_LOCAL">
+  <persistence-unit name="pokemonstroPU" transaction-type="RESOURCE_LOCAL">
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <class>model.classes.Player</class>
-    <class>model.classes.Attack</class>
-    <class>model.classes.Effect</class>
+    <class>model.classes.action.Attack</class>
+    <class>model.classes.action.Effect</class>
     <class>model.classes.Inventory</class>
-    <class>model.classes.Element</class>
-    <class>model.classes.Action</class>
-    <class>model.classes.Pokemonstro</class>
-    <class>model.classes.Item</class>
+    <class>model.classes.element.Element</class>
+    <class>model.classes.action.Action</class>
+    <class>model.classes.element.Pokemonstro</class>
+    <class>model.classes.element.Item</class>
     <class>model.classes.City</class>
     <class>model.classes.Building</class>
     <class>model.classes.SavedGame</class>
-    <class>model.classes.Inventory_Pokemonstro</class>
-    <class>model.classes.Inventory_Item</class>
+    <class>model.classes.Inventory_pokemonstro</class>
+    <class>model.classes.Inventory_item</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/pokemonstro"/>
       <property name="javax.persistence.jdbc.password" value=""/>

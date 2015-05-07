@@ -6,12 +6,18 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
 @Entity
 public class Building implements Serializable{
 	private static final long serialVersionUID = 1L;
+	 @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
 	@ManyToOne(cascade=CascadeType.ALL)
 	private City city;
 	@Column(length=50)
@@ -20,10 +26,8 @@ public class Building implements Serializable{
 	private int y;
 	private String image;
 	@OneToMany(mappedBy="ExternalBuilding")
-	@Column(nullable=true)
 	private List<Building> Internalbuilding;
 	@ManyToOne(cascade=CascadeType.ALL)
-	@Column(nullable=true)
 	private Building ExternalBuilding;
 	public City getCity() {
 		return city;

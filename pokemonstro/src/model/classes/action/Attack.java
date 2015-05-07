@@ -1,10 +1,9 @@
 package model.classes.action;
 
 import java.util.List;
-
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
-import model.classes.Inventory;
+import model.classes.element.Pokemonstro;
 
 /**
  *
@@ -13,6 +12,6 @@ import model.classes.Inventory;
 @Entity
 public class Attack extends Action{
 	private static final long serialVersionUID = 1L;
-	@ManyToMany(mappedBy="pokemonstro")
-    private List<Inventory> pokemonstro;
+	@ManyToMany(mappedBy="attack")
+    private List<Pokemonstro> pokemonstro;
 }

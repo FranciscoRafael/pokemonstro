@@ -2,12 +2,14 @@ package model.classes.element;
 
 import java.awt.Image;
 import java.io.Serializable;
-import java.util.List;
-import javax.persistence.*;
-import anima.component.base.ComponentBase;
-import model.classes.Inventory;
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.MappedSuperclass;
 import model.interfaces.IAction;
 import model.interfaces.IElement;
+import anima.component.base.ComponentBase;
 
 /**
  *
@@ -26,8 +28,6 @@ public class Element extends ComponentBase implements Serializable, IElement {
     @Column(length=250)
     private String image;
     private int life;
-    @ManyToMany(mappedBy="inventory")
-    private List<Inventory> inventory;
 	@Override
 	public String getName() {
 		// TODO Auto-generated method stub

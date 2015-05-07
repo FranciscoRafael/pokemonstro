@@ -33,5 +33,14 @@ public class City implements Serializable {
     
     public void setId(Integer id) {
         this.id = id;
-    }   
+    }
+
+	public List<Building> getBuilding() {
+		return building;
+	}
+
+	public void setBuilding(List<Building> building) {
+		this.building = building;
+	}   
+    
 }

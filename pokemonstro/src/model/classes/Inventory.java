@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.persistence.*;
 
+import anima.annotation.Component;
 import anima.component.base.ComponentBase;
 import model.interfaces.IElement;
 import model.interfaces.IInventory;
@@ -14,6 +15,8 @@ import model.interfaces.IInventory;
  * @author Danilo Charantola
  */
 @Entity
+@Component(id = "<src.model.classes.Inventory>",
+		   provides ={"<src.model.interfaces.IInventory>"})
 public class Inventory extends ComponentBase implements Serializable, IInventory {
     private static final long serialVersionUID = 1L;
     @Id
