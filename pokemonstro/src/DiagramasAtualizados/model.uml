@@ -28,7 +28,7 @@
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TSgqjO9pEeS7NpDY1ek00g" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TSgqje9pEeS7NpDY1ek00g" value="*"/>
       </ownedAttribute>
-      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_TSgqj-9pEeS7NpDY1ek00g" client="_TSgqhO9pEeS7NpDY1ek00g _TSgqhO9pEeS7NpDY1ek00g _TSgqhO9pEeS7NpDY1ek00g" supplier="_TSgqm-9pEeS7NpDY1ek00g" contract="_TSgqm-9pEeS7NpDY1ek00g"/>
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_TSgqj-9pEeS7NpDY1ek00g" client="_TSgqhO9pEeS7NpDY1ek00g" supplier="_TSgqm-9pEeS7NpDY1ek00g" contract="_TSgqm-9pEeS7NpDY1ek00g"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_TSgqke9pEeS7NpDY1ek00g" name="setPos">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_TSgqku9pEeS7NpDY1ek00g" name="position">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
@@ -381,8 +381,8 @@
       </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_tBQj0O9tEeS7NpDY1ek00g" name="ElementFactory" isAbstract="true">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_rUxh8O9vEeS7NpDY1ek00g" name="ItemInstance" type="_ziWAUO9vEeS7NpDY1ek00g"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_-eIYcO9vEeS7NpDY1ek00g" name="PokemonstroInstance" type="_DA6AEO9wEeS7NpDY1ek00g"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_rUxh8O9vEeS7NpDY1ek00g" name="ItemInstance" visibility="private" type="_ziWAUO9vEeS7NpDY1ek00g"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_-eIYcO9vEeS7NpDY1ek00g" name="PokemonstroInstance" visibility="private" type="_DA6AEO9wEeS7NpDY1ek00g"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_1Nu2AO9tEeS7NpDY1ek00g" name="createFactory">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_4Dlo0O9tEeS7NpDY1ek00g" name="type">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
@@ -430,7 +430,7 @@
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Y_fFUO9yEeS7NpDY1ek00g" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Y_fFUe9yEeS7NpDY1ek00g" value="*"/>
       </ownedAttribute>
-      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_jJo3Eu9wEeS7NpDY1ek00g" client="_jJo3EO9wEeS7NpDY1ek00g _jJo3EO9wEeS7NpDY1ek00g _jJo3EO9wEeS7NpDY1ek00g" supplier="_jJyoEO9wEeS7NpDY1ek00g" contract="_jJyoEO9wEeS7NpDY1ek00g"/>
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_jJo3Eu9wEeS7NpDY1ek00g" client="_jJo3EO9wEeS7NpDY1ek00g" supplier="_jJyoEO9wEeS7NpDY1ek00g" contract="_jJyoEO9wEeS7NpDY1ek00g"/>
       <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_iNSRoO9yEeS7NpDY1ek00g" client="_jJo3EO9wEeS7NpDY1ek00g" supplier="_jJyoEO9wEeS7NpDY1ek00g" contract="_jJyoEO9wEeS7NpDY1ek00g"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_ecCNkO9yEeS7NpDY1ek00g" name="removeElement">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_ecCNke9yEeS7NpDY1ek00g" direction="return">
@@ -501,7 +501,7 @@
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_4xtrYO9zEeS7NpDY1ek00g" name="movement" visibility="private" type="_IdluYO90EeS7NpDY1ek00g"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_KSRYEO90EeS7NpDY1ek00g" name="inventory" type="_jJyoEO9wEeS7NpDY1ek00g"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_KSRYEO90EeS7NpDY1ek00g" name="inventory" visibility="private" type="_jJyoEO9wEeS7NpDY1ek00g"/>
       <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_iQ1C8O90EeS7NpDY1ek00g" client="_uFbkUO9yEeS7NpDY1ek00g" supplier="_y3IYwO9yEeS7NpDY1ek00g" contract="_y3IYwO9yEeS7NpDY1ek00g"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_FTQV0O9zEeS7NpDY1ek00g" name="setImage">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_FTQV0e9zEeS7NpDY1ek00g" name="ElementImage"/>
@@ -784,7 +784,7 @@
       </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_s4xckO91EeS7NpDY1ek00g" name="Storage">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_wdMToO93EeS7NpDY1ek00g" name="playerBuilder" type="_cZcG4O92EeS7NpDY1ek00g"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_wdMToO93EeS7NpDY1ek00g" name="playerBuilder" visibility="private" type="_cZcG4O92EeS7NpDY1ek00g"/>
       <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_PxtxYO92EeS7NpDY1ek00g" client="_s4xckO91EeS7NpDY1ek00g" supplier="_x97YgO91EeS7NpDY1ek00g" contract="_x97YgO91EeS7NpDY1ek00g"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_MfJNYO92EeS7NpDY1ek00g" name="getPlayer">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_MfJNYe92EeS7NpDY1ek00g" name="Name">
@@ -840,7 +840,7 @@
       </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_G2fGUO93EeS7NpDY1ek00g" name="PlayerBuilder">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_NjiNIO93EeS7NpDY1ek00g" name="player" type="_y3IYwO9yEeS7NpDY1ek00g"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_NjiNIO93EeS7NpDY1ek00g" name="player" visibility="private" type="_y3IYwO9yEeS7NpDY1ek00g"/>
       <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_YbLsIO93EeS7NpDY1ek00g" client="_G2fGUO93EeS7NpDY1ek00g" supplier="_cZcG4O92EeS7NpDY1ek00g" contract="_cZcG4O92EeS7NpDY1ek00g"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_KaPg8O93EeS7NpDY1ek00g" name="BuildMover"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_KaPg8e93EeS7NpDY1ek00g" name="BuildInventory">
@@ -871,11 +871,11 @@
       </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_5EtjEO93EeS7NpDY1ek00g" name="ElementsBuilder">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_5EtjEe93EeS7NpDY1ek00g" name="elements" type="_PElUsO9tEeS7NpDY1ek00g">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_5EtjEe93EeS7NpDY1ek00g" name="elements" visibility="private" type="_PElUsO9tEeS7NpDY1ek00g">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_LXpH4O94EeS7NpDY1ek00g" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_LXy44O94EeS7NpDY1ek00g" value="*"/>
       </ownedAttribute>
-      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_5EtjEu93EeS7NpDY1ek00g" client="_5EtjEO93EeS7NpDY1ek00g _5EtjEO93EeS7NpDY1ek00g _5EtjEO93EeS7NpDY1ek00g" supplier="_5EkZIO93EeS7NpDY1ek00g" contract="_5EkZIO93EeS7NpDY1ek00g"/>
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_5EtjEu93EeS7NpDY1ek00g" client="_5EtjEO93EeS7NpDY1ek00g" supplier="_5EkZIO93EeS7NpDY1ek00g" contract="_5EkZIO93EeS7NpDY1ek00g"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_JdyDQO94EeS7NpDY1ek00g" name="getResult">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_JdyDQe94EeS7NpDY1ek00g" type="_PElUsO9tEeS7NpDY1ek00g" direction="return">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JdyDQu94EeS7NpDY1ek00g" value="1"/>
