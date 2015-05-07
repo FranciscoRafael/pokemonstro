@@ -3,7 +3,7 @@
 -- Server version:               5.5.27-log - MySQL Community Server (GPL)
 -- Server OS:                    Win32
 -- HeidiSQL version:             7.0.0.4053
--- Date/time:                    2015-05-06 20:48:36
+-- Date/time:                    2015-05-07 17:46:05
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -35,14 +35,19 @@ CREATE TABLE IF NOT EXISTS `building` (
   `x` int(11) DEFAULT NULL,
   `y` int(11) DEFAULT NULL,
   `image` varchar(250) DEFAULT NULL,
-  `idBuilding` int(11) DEFAULT NULL,
+  `EXTERNALBUILDING_ID` int(11) DEFAULT NULL,
+  `CITY_ID` int(10) DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `FK_building_building` (`idBuilding`),
-  CONSTRAINT `FK_building_building` FOREIGN KEY (`idBuilding`) REFERENCES `building` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  KEY `FK_building_building` (`EXTERNALBUILDING_ID`),
+  KEY `FK_building_city` (`CITY_ID`),
+  CONSTRAINT `FK_building_city` FOREIGN KEY (`CITY_ID`) REFERENCES `city` (`ID`),
+  CONSTRAINT `FK_building_building` FOREIGN KEY (`EXTERNALBUILDING_ID`) REFERENCES `building` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
--- Dumping data for table pokemonstro.building: ~0 rows (approximately)
+-- Dumping data for table pokemonstro.building: ~1 rows (approximately)
 /*!40000 ALTER TABLE `building` DISABLE KEYS */;
+INSERT INTO `building` (`id`, `Name`, `x`, `y`, `image`, `EXTERNALBUILDING_ID`, `CITY_ID`) VALUES
+	(1, 'Academia', 20, 50, NULL, NULL, 1);
 /*!40000 ALTER TABLE `building` ENABLE KEYS */;
 
 
@@ -53,8 +58,10 @@ CREATE TABLE IF NOT EXISTS `city` (
   PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table pokemonstro.city: ~0 rows (approximately)
+-- Dumping data for table pokemonstro.city: ~1 rows (approximately)
 /*!40000 ALTER TABLE `city` DISABLE KEYS */;
+INSERT INTO `city` (`ID`, `NAME`) VALUES
+	(1, 'catralandia');
 /*!40000 ALTER TABLE `city` ENABLE KEYS */;
 
 
@@ -77,10 +84,8 @@ CREATE TABLE IF NOT EXISTS `inventory` (
   PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table pokemonstro.inventory: ~1 rows (approximately)
+-- Dumping data for table pokemonstro.inventory: ~0 rows (approximately)
 /*!40000 ALTER TABLE `inventory` DISABLE KEYS */;
-INSERT INTO `inventory` (`ID`) VALUES
-	(2);
 /*!40000 ALTER TABLE `inventory` ENABLE KEYS */;
 
 
@@ -93,8 +98,8 @@ CREATE TABLE IF NOT EXISTS `inventory_item` (
   PRIMARY KEY (`ID`),
   KEY `FK_INVENTORY_ITEM_INVENTORY_ID` (`INVENTORY_ID`),
   KEY `FK_INVENTORY_ITEM_ITEM_ID` (`ITEM_ID`),
-  CONSTRAINT `FK_INVENTORY_ITEM_ITEM_ID` FOREIGN KEY (`ITEM_ID`) REFERENCES `item` (`ID`),
-  CONSTRAINT `FK_INVENTORY_ITEM_INVENTORY_ID` FOREIGN KEY (`INVENTORY_ID`) REFERENCES `inventory` (`ID`)
+  CONSTRAINT `FK_INVENTORY_ITEM_INVENTORY_ID` FOREIGN KEY (`INVENTORY_ID`) REFERENCES `inventory` (`ID`),
+  CONSTRAINT `FK_INVENTORY_ITEM_ITEM_ID` FOREIGN KEY (`ITEM_ID`) REFERENCES `item` (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- Dumping data for table pokemonstro.inventory_item: ~0 rows (approximately)
@@ -157,15 +162,17 @@ CREATE TABLE IF NOT EXISTS `player` (
   `NAME` varchar(50) DEFAULT NULL,
   `POSITION` varchar(20) DEFAULT NULL,
   `INVENTORY_ID` int(11) DEFAULT NULL,
+  `CITY_ID` int(11) DEFAULT NULL,
   PRIMARY KEY (`ID`),
   KEY `FK_PLAYER_INVENTORY_ID` (`INVENTORY_ID`),
-  CONSTRAINT `FK_PLAYER_INVENTORY_ID` FOREIGN KEY (`INVENTORY_ID`) REFERENCES `inventory` (`ID`)
+  KEY `FK_player_city` (`CITY_ID`),
+  CONSTRAINT `FK_player_city` FOREIGN KEY (`CITY_ID`) REFERENCES `city` (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- Dumping data for table pokemonstro.player: ~1 rows (approximately)
 /*!40000 ALTER TABLE `player` DISABLE KEYS */;
-INSERT INTO `player` (`ID`, `IMAGE`, `NAME`, `POSITION`, `INVENTORY_ID`) VALUES
-	(1, NULL, 'teste3', '2 (1,2)', 2);
+INSERT INTO `player` (`ID`, `IMAGE`, `NAME`, `POSITION`, `INVENTORY_ID`, `CITY_ID`) VALUES
+	(151, NULL, 'pastel', '(0,0)', NULL, 1);
 /*!40000 ALTER TABLE `player` ENABLE KEYS */;
 
 
@@ -223,7 +230,7 @@ CREATE TABLE IF NOT EXISTS `sequence` (
 -- Dumping data for table pokemonstro.sequence: ~1 rows (approximately)
 /*!40000 ALTER TABLE `sequence` DISABLE KEYS */;
 INSERT INTO `sequence` (`SEQ_NAME`, `SEQ_COUNT`) VALUES
-	('SEQ_GEN', 50);
+	('SEQ_GEN', 200);
 /*!40000 ALTER TABLE `sequence` ENABLE KEYS */;
 /*!40014 SET FOREIGN_KEY_CHECKS=1 */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

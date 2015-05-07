@@ -2,6 +2,7 @@ package model.interfaces;
 
 import model.classes.Player;
 import model.exceptions.NonexistentEntityException;
+import model.exceptions.PreexistingEntityException;
 import anima.annotation.ComponentInterface;
 import anima.component.ISupports;
 
@@ -14,7 +15,7 @@ import anima.component.ISupports;
 public interface IStorage extends ISupports {
 	public void edit(Player player) throws NonexistentEntityException, Exception;
 	public void destroy(Integer id) throws NonexistentEntityException;
-	public IPlayer getPlayer(int id);
-	public void savePlayer(IPlayer player);
+	public IPlayer getPlayer(int id) throws NonexistentEntityException;
+	public void savePlayer(IPlayer player) throws PreexistingEntityException, Exception ;
 	public IElement[] getAllElements(String type);
 }
