@@ -1,5 +1,6 @@
 package model.classes;
 
+import java.awt.Image;
 import java.io.Serializable;
 import java.util.List;
 
@@ -8,6 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -44,7 +46,7 @@ public class City implements Serializable {
 	}
 
     public Image getImage() {
-        return new ImageIcon(getClass().getResource(name)).getImage();
+        return new ImageIcon(getClass().getResource("/Images/"+ name + ".png")).getImage();
     }
     
 }

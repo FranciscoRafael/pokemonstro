@@ -1,5 +1,7 @@
 package model.classes;
 
+import java.awt.Image;
+import java.awt.Rectangle;
 import java.io.Serializable;
 import java.util.List;
 
@@ -11,6 +13,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.swing.ImageIcon;
 
 @Entity
 public class Building implements Serializable{
@@ -53,12 +56,7 @@ public class Building implements Serializable{
 	public void setY(int y) {
 		this.y = y;
 	}
-	public String getImage() {
-		return image;
-	}
-	public void setImage(String image) {
-		this.image = image;
-	}
+	
 	public List<Building> getInternalbuilding() {
 		return Internalbuilding;
 	}
@@ -74,7 +72,8 @@ public class Building implements Serializable{
 	public Rectangle getRectangle() {
 		return new Rectangle(x, y, this.getBuildingImage().getWidth(null), this.getBuildingImage().getHeight(null));
 	}
+	
 	public Image getBuildingImage() {
-		return new ImageIcon(getClass().getResource(image)).getImage();
+		return new ImageIcon(getClass().getResource("/Images/"+ image + ".png")).getImage();
 	}
 }
