@@ -71,4 +71,10 @@ public class Building implements Serializable{
 	public void setExternalBuilding(Building externalBuilding) {
 		ExternalBuilding = externalBuilding;
 	}
+	public Rectangle getRectangle() {
+		return new Rectangle(x, y, this.getBuildingImage().getWidth(null), this.getBuildingImage().getHeight(null));
+	}
+	public Image getBuildingImage() {
+		return new ImageIcon(getClass().getResource(image)).getImage();
+	}
 }

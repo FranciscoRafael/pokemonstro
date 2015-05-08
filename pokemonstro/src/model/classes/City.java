@@ -41,6 +41,10 @@ public class City implements Serializable {
 
 	public void setBuilding(List<Building> building) {
 		this.building = building;
-	}   
+	}
+
+    public Image getImage() {
+        return new ImageIcon(getClass().getResource(name)).getImage();
+    }
     
 }
