@@ -3,7 +3,7 @@
 -- Server version:               5.5.27-log - MySQL Community Server (GPL)
 -- Server OS:                    Win32
 -- HeidiSQL version:             7.0.0.4053
--- Date/time:                    2015-05-07 17:46:05
+-- Date/time:                    2015-05-08 20:45:43
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -40,14 +40,16 @@ CREATE TABLE IF NOT EXISTS `building` (
   PRIMARY KEY (`id`),
   KEY `FK_building_building` (`EXTERNALBUILDING_ID`),
   KEY `FK_building_city` (`CITY_ID`),
-  CONSTRAINT `FK_building_city` FOREIGN KEY (`CITY_ID`) REFERENCES `city` (`ID`),
-  CONSTRAINT `FK_building_building` FOREIGN KEY (`EXTERNALBUILDING_ID`) REFERENCES `building` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+  CONSTRAINT `FK_building_building` FOREIGN KEY (`EXTERNALBUILDING_ID`) REFERENCES `building` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `FK_building_city` FOREIGN KEY (`CITY_ID`) REFERENCES `city` (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
--- Dumping data for table pokemonstro.building: ~1 rows (approximately)
+-- Dumping data for table pokemonstro.building: ~3 rows (approximately)
 /*!40000 ALTER TABLE `building` DISABLE KEYS */;
 INSERT INTO `building` (`id`, `Name`, `x`, `y`, `image`, `EXTERNALBUILDING_ID`, `CITY_ID`) VALUES
-	(1, 'Academia', 20, 50, NULL, NULL, 1);
+	(1, 'Academia', 20, 50, NULL, NULL, 1),
+	(2, 'porta', 25, 55, NULL, 1, 1),
+	(3, 'janela', 30, 50, NULL, 1, 1);
 /*!40000 ALTER TABLE `building` ENABLE KEYS */;
 
 
@@ -135,8 +137,11 @@ CREATE TABLE IF NOT EXISTS `item` (
   PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table pokemonstro.item: ~0 rows (approximately)
+-- Dumping data for table pokemonstro.item: ~2 rows (approximately)
 /*!40000 ALTER TABLE `item` DISABLE KEYS */;
+INSERT INTO `item` (`ID`, `IMAGE`, `LIFE`, `NAME`, `TYPE`) VALUES
+	(0, NULL, 1, 'whey', 'cura'),
+	(1, NULL, 1, 'anabol', 'revive');
 /*!40000 ALTER TABLE `item` ENABLE KEYS */;
 
 
@@ -157,7 +162,7 @@ CREATE TABLE IF NOT EXISTS `item_effect` (
 
 -- Dumping structure for table pokemonstro.player
 CREATE TABLE IF NOT EXISTS `player` (
-  `ID` int(11) NOT NULL,
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
   `IMAGE` varchar(250) DEFAULT NULL,
   `NAME` varchar(50) DEFAULT NULL,
   `POSITION` varchar(20) DEFAULT NULL,
@@ -167,12 +172,14 @@ CREATE TABLE IF NOT EXISTS `player` (
   KEY `FK_PLAYER_INVENTORY_ID` (`INVENTORY_ID`),
   KEY `FK_player_city` (`CITY_ID`),
   CONSTRAINT `FK_player_city` FOREIGN KEY (`CITY_ID`) REFERENCES `city` (`ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=153 DEFAULT CHARSET=latin1;
 
--- Dumping data for table pokemonstro.player: ~1 rows (approximately)
+-- Dumping data for table pokemonstro.player: ~2 rows (approximately)
 /*!40000 ALTER TABLE `player` DISABLE KEYS */;
 INSERT INTO `player` (`ID`, `IMAGE`, `NAME`, `POSITION`, `INVENTORY_ID`, `CITY_ID`) VALUES
-	(151, NULL, 'pastel', '(0,0)', NULL, 1);
+	(1, NULL, 'danilo', '(2,2)', NULL, 1),
+	(151, NULL, 'pastel', '(0,0)', NULL, 1),
+	(152, NULL, 'mestre', NULL, NULL, 1);
 /*!40000 ALTER TABLE `player` ENABLE KEYS */;
 
 
@@ -230,7 +237,7 @@ CREATE TABLE IF NOT EXISTS `sequence` (
 -- Dumping data for table pokemonstro.sequence: ~1 rows (approximately)
 /*!40000 ALTER TABLE `sequence` DISABLE KEYS */;
 INSERT INTO `sequence` (`SEQ_NAME`, `SEQ_COUNT`) VALUES
-	('SEQ_GEN', 200);
+	('SEQ_GEN', 300);
 /*!40000 ALTER TABLE `sequence` ENABLE KEYS */;
 /*!40014 SET FOREIGN_KEY_CHECKS=1 */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

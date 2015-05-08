@@ -8,10 +8,16 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
+import model.exceptions.PreexistingEntityException;
 import model.interfaces.IInventory;
 import model.interfaces.IPlayer;
+import model.interfaces.IStorage;
 import anima.annotation.Component;
 import anima.component.base.ComponentBase;
+import anima.context.exception.ContextException;
+import anima.factory.IGlobalFactory;
+import anima.factory.context.componentContext.ComponentContextFactory;
+import anima.factory.exception.FactoryException;
 
 /**
  *
@@ -23,7 +29,7 @@ import anima.component.base.ComponentBase;
 public class Player extends ComponentBase implements Serializable, IPlayer {
     private static final long serialVersionUID = 1L;
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Integer id;
     @Column(length=50)
     private String name;
@@ -66,8 +72,17 @@ public class Player extends ComponentBase implements Serializable, IPlayer {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setName(String name) throws PreexistingEntityException, ContextException, FactoryException{
+    	IGlobalFactory factory;
+		factory = ComponentContextFactory.createGlobalFactory();
+    	factory.registerPrototype(Storage.class);
+    	IStorage storage=factory.createInstance("<pokemonstro.src.model.classes.Storage>");
+    	if(storage.possibleName(name)){
+    		this.name = name;
+    	}else{
+    		throw new PreexistingEntityException("Algum frango já escolheu esse nome.\n"
+    							   			     + "Por favor, escolha outro.", null);
+    	}
     }
 
     public String getPosition() {

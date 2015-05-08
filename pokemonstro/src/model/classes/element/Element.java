@@ -30,8 +30,7 @@ public class Element extends ComponentBase implements Serializable, IElement {
     private int life;
 	@Override
 	public String getName() {
-		// TODO Auto-generated method stub
-		return null;
+		return this.name;
 	}
 	@Override
 	public void setName(String name) {
