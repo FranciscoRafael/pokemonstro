@@ -1,5 +1,6 @@
 package model.classes;
 
+import java.awt.*;
 import java.io.Serializable;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -8,6 +9,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
+import javax.swing.*;
+
 import model.exceptions.PreexistingEntityException;
 import model.interfaces.IInventory;
 import model.interfaces.IPlayer;
@@ -45,6 +48,7 @@ public class Player extends ComponentBase implements Serializable, IPlayer {
     public void setCity(City city){
     	this.city=city;
     }
+    
     public City getCity(){
     	return city;
     }
@@ -58,6 +62,10 @@ public class Player extends ComponentBase implements Serializable, IPlayer {
     
     public Integer getId() {
         return id;
+    }
+
+    public Image getPlayerImage() {
+        return new ImageIcon(getClass().getResource("/Images/"+ image + ".png")).getImage();
     }
 
     public String getImage() {
@@ -80,7 +88,7 @@ public class Player extends ComponentBase implements Serializable, IPlayer {
     	if(storage.possibleName(name)){
     		this.name = name;
     	}else{
-    		throw new PreexistingEntityException("Algum frango já escolheu esse nome.\n"
+    		throw new PreexistingEntityException("Algum frango ja escolheu esse nome.\n"
     							   			     + "Por favor, escolha outro.", null);
     	}
     }

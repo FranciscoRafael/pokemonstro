@@ -1,5 +1,8 @@
 package model.classes;
 
+import model.interfaces.IBuilding;
+import model.interfaces.IConstruction;
+
 import java.awt.Image;
 import java.awt.Rectangle;
 import java.io.Serializable;
@@ -16,7 +19,7 @@ import javax.persistence.OneToMany;
 import javax.swing.ImageIcon;
 
 @Entity
-public class Building implements Serializable{
+public class Building implements Serializable, IConstruction, IBuilding{
 	private static final long serialVersionUID = 1L;
 	 @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -56,12 +59,14 @@ public class Building implements Serializable{
 	public void setY(int y) {
 		this.y = y;
 	}
-	
 	public List<Building> getInternalbuilding() {
 		return Internalbuilding;
 	}
 	public void setInternalbuilding(List<Building> internalbuilding) {
 		Internalbuilding = internalbuilding;
+	}
+	public Image getImage() {
+		return new ImageIcon(getClass().getResource("/Images/"+ image + ".png")).getImage();
 	}
 	public Building getExternalBuilding() {
 		return ExternalBuilding;
@@ -70,10 +75,6 @@ public class Building implements Serializable{
 		ExternalBuilding = externalBuilding;
 	}
 	public Rectangle getRectangle() {
-		return new Rectangle(x, y, this.getBuildingImage().getWidth(null), this.getBuildingImage().getHeight(null));
-	}
-	
-	public Image getBuildingImage() {
-		return new ImageIcon(getClass().getResource("/Images/"+ image + ".png")).getImage();
+		return new Rectangle(x, y, this.getImage().getWidth(null), this.getImage().getHeight(null));
 	}
 }

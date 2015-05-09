@@ -1,5 +1,7 @@
 package model.classes;
 
+import model.interfaces.IConstruction;
+
 import java.awt.Image;
 import java.io.Serializable;
 import java.util.List;
@@ -16,7 +18,7 @@ import javax.swing.ImageIcon;
  * @author Danilo Charantola
  */
 @Entity
-public class City implements Serializable {
+public class City implements Serializable, IConstruction{
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -32,18 +34,20 @@ public class City implements Serializable {
     public void setName(String Name) {
         this.name = Name;
     }
-    
+
+    @Override
+    public List<Building> getInternalbuilding() {
+        return building;
+    }
+
+    @Override
+    public void setInternalbuilding(List<Building> internalbuilding) {
+        building = internalbuilding;
+    }
+
     public void setId(Integer id) {
         this.id = id;
     }
-
-	public List<Building> getBuilding() {
-		return building;
-	}
-
-	public void setBuilding(List<Building> building) {
-		this.building = building;
-	}
 
     public Image getImage() {
         return new ImageIcon(getClass().getResource("/Images/"+ name + ".png")).getImage();
