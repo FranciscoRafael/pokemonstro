@@ -9,11 +9,13 @@ import model.classes.element.Item;
  * @author Danilo Charantola
  */
 @Entity
+/*classe que relaciona um item com o seu inventario*/
 public class Inventory_item implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
+    /*quantidade desse item neste inventario*/
     private Integer qty;
     @ManyToOne(cascade=CascadeType.ALL)
     private Inventory inventory;
@@ -47,10 +49,6 @@ public class Inventory_item implements Serializable {
     
     public Integer getId() {
         return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
     }
     
 }

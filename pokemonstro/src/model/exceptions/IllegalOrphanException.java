@@ -3,7 +3,7 @@ package model.exceptions;
 import java.util.ArrayList;
 import java.util.List;
 
-public class IllegalOrphanException extends Exception {
+public class IllegalOrphanException extends ControlledException {
 	private static final long serialVersionUID = 1L;
 	private List<String> messages;
     public IllegalOrphanException(List<String> messages) {

@@ -2,6 +2,7 @@ package model.classes;
 
 import java.awt.*;
 import java.io.Serializable;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -11,6 +12,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.swing.*;
 
+import model.exceptions.ControlledException;
 import model.exceptions.PreexistingEntityException;
 import model.interfaces.IInventory;
 import model.interfaces.IPlayer;
@@ -80,16 +82,28 @@ public class Player extends ComponentBase implements Serializable, IPlayer {
         return name;
     }
 
-    public void setName(String name) throws PreexistingEntityException, ContextException, FactoryException{
-    	IGlobalFactory factory;
-		factory = ComponentContextFactory.createGlobalFactory();
-    	factory.registerPrototype(Storage.class);
-    	IStorage storage=factory.createInstance("<pokemonstro.src.model.classes.Storage>");
-    	if(storage.possibleName(name)){
-    		this.name = name;
-    	}else{
-    		throw new PreexistingEntityException("Algum frango ja escolheu esse nome.\n"
-    							   			     + "Por favor, escolha outro.", null);
+    public void setName(String name) throws ControlledException {
+    	try{
+	    	IGlobalFactory factory;
+			factory = ComponentContextFactory.createGlobalFactory();
+	    	factory.registerPrototype(Storage.class);
+	    	IStorage storage=factory.createInstance("<pokemonstro.src.model.classes.Storage>");
+	    	/*verifica se pode ser escolhido esse nome*/
+	    	if(storage.possibleName(name)){
+	    		this.name = name;
+	    	}else{
+	    		/*lanca uma excecao porque esse nome nao eh permitido*/
+	    		throw new PreexistingEntityException("Algum frango ja escolheu esse nome.\n"
+	    							   			     + "Por favor, escolha outro.", null);
+	    	}
+    	}catch(ContextException | FactoryException e){
+    		/*trata a excecao*/
+    		String message="";
+    		if(e.getMessage()!=null)
+    			message=e.getMessage();
+    		throw new ControlledException("Monstro, tivemos um problema inesperado\n"
+    									+ "com nossa fabrica de monstros.\n"
+    									+ message, e);
     	}
     }
 

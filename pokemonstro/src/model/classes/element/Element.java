@@ -2,13 +2,16 @@ package model.classes.element;
 
 import java.awt.Image;
 import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
+
 import model.interfaces.IAction;
 import model.interfaces.IElement;
+import anima.annotation.Component;
 import anima.component.base.ComponentBase;
 
 /**
@@ -16,7 +19,9 @@ import anima.component.base.ComponentBase;
  * @author Danilo Charantola
  */
 @MappedSuperclass
-public class Element extends ComponentBase implements Serializable, IElement {
+@Component(id = "<src.model.classes.Element>",
+		   provides ={"<src.model.interfaces.IElement>"})
+public abstract class Element extends ComponentBase implements Serializable, IElement {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -27,6 +32,7 @@ public class Element extends ComponentBase implements Serializable, IElement {
     private String type;
     @Column(length=250)
     private String image;
+    /*duracao do efeito do item ou vida do pokemonstro*/
     private int life;
 	@Override
 	public String getName() {
@@ -78,13 +84,7 @@ public class Element extends ComponentBase implements Serializable, IElement {
 		
 	}
 	@Override
-	public IAction[] getActions() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	public abstract IAction[] getActions();
 	@Override
-	public void setAction(IAction action) {
-		// TODO Auto-generated method stub
-		
-	}
+	public abstract void setAction(IAction action);
 }

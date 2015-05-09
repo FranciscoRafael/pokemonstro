@@ -13,11 +13,15 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.swing.ImageIcon;
 
+import anima.annotation.Component;
+
 /**
  *
  * @author Danilo Charantola
  */
 @Entity
+@Component(id = "<src.model.classes.City>",
+		   provides ={"<src.model.interfaces.IConstruction>"})
 public class City implements Serializable, IConstruction{
     private static final long serialVersionUID = 1L;
     @Id
@@ -25,6 +29,7 @@ public class City implements Serializable, IConstruction{
     private Integer id;
     private String name;
     @OneToMany(mappedBy="city")
+    /*construcoes da cidade*/
     List<Building> building;
 
     public String getName() {

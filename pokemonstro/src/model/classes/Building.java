@@ -18,7 +18,12 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.swing.ImageIcon;
 
+import anima.annotation.Component;
+
 @Entity
+@Component(id = "<src.model.classes.Building>",
+		   provides ={"<src.model.interfaces.IBuilding>", 
+				      "<src.model.interfaces.IConstruction>"})
 public class Building implements Serializable, IConstruction, IBuilding{
 	private static final long serialVersionUID = 1L;
 	 @Id
@@ -32,9 +37,13 @@ public class Building implements Serializable, IConstruction, IBuilding{
 	private int y;
 	private String image;
 	@OneToMany(mappedBy="ExternalBuilding")
+	/*lista de construcoes que possui*/
 	private List<Building> Internalbuilding;
+	
 	@ManyToOne(cascade=CascadeType.ALL)
+	/*construcao a qual pertence*/
 	private Building ExternalBuilding;
+	
 	public City getCity() {
 		return city;
 	}

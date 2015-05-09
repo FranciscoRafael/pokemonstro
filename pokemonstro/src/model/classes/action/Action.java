@@ -1,8 +1,11 @@
 package model.classes.action;
 
 import java.io.Serializable;
+
 import javax.persistence.*;
+
 import model.interfaces.IAction;
+import anima.annotation.Component;
 import anima.component.base.ComponentBase;
 
 /**
@@ -10,6 +13,8 @@ import anima.component.base.ComponentBase;
  * @author Danilo Charantola
  */
 @MappedSuperclass
+@Component(id = "<src.model.classes.Action>",
+		   provides ={"<src.model.interfaces.IAction>"})
 public class Action extends ComponentBase implements Serializable, IAction{
     private static final long serialVersionUID = 1L;
     @Id
@@ -17,6 +22,8 @@ public class Action extends ComponentBase implements Serializable, IAction{
     private Integer id;
     @Column(length=50)
     private String name;
+    /* para o efeito, indica, por exemplo, em quanto a vida sera aumentada
+     * para o ataque, indica a sua forca*/
     private int power;
 
     public Integer getId() {
@@ -45,6 +52,6 @@ public class Action extends ComponentBase implements Serializable, IAction{
 
 	@Override
 	public void use() {
-		// TODO Auto-generated method stub		
+		/*utiliza o item ou realiza o ataque*/		
 	}    
 }

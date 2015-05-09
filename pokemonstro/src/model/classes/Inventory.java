@@ -23,8 +23,12 @@ public class Inventory extends ComponentBase implements Serializable, IInventory
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     @OneToMany(mappedBy="inventory")
+    /*lista de pokemonstros nesse inventario
+     *permite pegar o pokemonstro e a sua quantidade*/
     private List<Inventory_pokemonstro> inventory_pokemonstro;
     @OneToMany(mappedBy="inventory")
+    /*lista de itens nesse inventario
+     *permite pegar o item e sua quantidade*/
     private List<Inventory_item> inventory_item;
 
     public Integer getId() {

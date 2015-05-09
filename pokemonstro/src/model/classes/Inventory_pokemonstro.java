@@ -14,11 +14,13 @@ import model.classes.element.Pokemonstro;
  * @author Danilo Charantola
  */
 @Entity
+/*classe que relaciona um pokemonstro com o seu inventario*/
 public class Inventory_pokemonstro implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
+    /*quantidade desse pokemonstro neste inventario*/
     private Integer qty;
     @ManyToOne(cascade=CascadeType.ALL)
     private Inventory inventory;

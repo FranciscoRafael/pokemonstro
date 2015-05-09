@@ -1,15 +1,14 @@
 package model.interfaces;
 
 
+import anima.annotation.ComponentInterface;
 import model.classes.Building;
 import model.classes.City;
-import java.util.List;
-import javax.swing.*;
-import java.awt.*;
 
 /**
  * Created by Alexandre on 08/05/15.
  */
+@ComponentInterface("<pokemonstro.src.model.interfaces.IBuilding>")
 public interface IBuilding {
     public City getCity();
     public void setCity(City city);

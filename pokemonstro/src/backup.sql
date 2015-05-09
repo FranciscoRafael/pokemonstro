@@ -3,7 +3,7 @@
 -- Server version:               5.5.27-log - MySQL Community Server (GPL)
 -- Server OS:                    Win32
 -- HeidiSQL version:             7.0.0.4053
--- Date/time:                    2015-05-08 20:45:43
+-- Date/time:                    2015-05-09 14:46:31
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -174,7 +174,7 @@ CREATE TABLE IF NOT EXISTS `player` (
   CONSTRAINT `FK_player_city` FOREIGN KEY (`CITY_ID`) REFERENCES `city` (`ID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=153 DEFAULT CHARSET=latin1;
 
--- Dumping data for table pokemonstro.player: ~2 rows (approximately)
+-- Dumping data for table pokemonstro.player: ~3 rows (approximately)
 /*!40000 ALTER TABLE `player` DISABLE KEYS */;
 INSERT INTO `player` (`ID`, `IMAGE`, `NAME`, `POSITION`, `INVENTORY_ID`, `CITY_ID`) VALUES
 	(1, NULL, 'danilo', '(2,2)', NULL, 1),
@@ -211,20 +211,6 @@ CREATE TABLE IF NOT EXISTS `pokemonstro_attack` (
 -- Dumping data for table pokemonstro.pokemonstro_attack: ~0 rows (approximately)
 /*!40000 ALTER TABLE `pokemonstro_attack` DISABLE KEYS */;
 /*!40000 ALTER TABLE `pokemonstro_attack` ENABLE KEYS */;
-
-
--- Dumping structure for table pokemonstro.savedgame
-CREATE TABLE IF NOT EXISTS `savedgame` (
-  `ID` int(11) NOT NULL,
-  `PLAYER_ID` int(11) DEFAULT NULL,
-  PRIMARY KEY (`ID`),
-  KEY `FK_SAVEDGAME_PLAYER_ID` (`PLAYER_ID`),
-  CONSTRAINT `FK_SAVEDGAME_PLAYER_ID` FOREIGN KEY (`PLAYER_ID`) REFERENCES `player` (`ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- Dumping data for table pokemonstro.savedgame: ~0 rows (approximately)
-/*!40000 ALTER TABLE `savedgame` DISABLE KEYS */;
-/*!40000 ALTER TABLE `savedgame` ENABLE KEYS */;
 
 
 -- Dumping structure for table pokemonstro.sequence

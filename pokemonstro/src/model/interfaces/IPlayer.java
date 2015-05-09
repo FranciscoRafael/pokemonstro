@@ -1,10 +1,8 @@
 package model.interfaces;
 
-import model.exceptions.PreexistingEntityException;
+import model.exceptions.ControlledException;
 import anima.annotation.ComponentInterface;
 import anima.component.ISupports;
-import anima.context.exception.ContextException;
-import anima.factory.exception.FactoryException;
 
 /**
 *
@@ -14,8 +12,7 @@ import anima.factory.exception.FactoryException;
 @ComponentInterface("<pokemonstro.src.model.interfaces.IPlayer>")
 public interface IPlayer extends ISupports{
 	public String getName();
-	public void setName(String name) throws PreexistingEntityException, 
-											ContextException, FactoryException;
+	public void setName(String name) throws ControlledException;
 	public String getImage();
 	public void setImage(String path);
 	public String getPosition();

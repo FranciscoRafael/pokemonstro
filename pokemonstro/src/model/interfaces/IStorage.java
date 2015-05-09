@@ -1,11 +1,7 @@
 package model.interfaces;
 
-import javax.persistence.PersistenceException;
-
 import model.classes.Player;
-import model.exceptions.EqualPlayers;
-import model.exceptions.NonexistentEntityException;
-import model.exceptions.PreexistingEntityException;
+import model.exceptions.ControlledException;
 import anima.annotation.ComponentInterface;
 import anima.component.ISupports;
 
@@ -16,10 +12,16 @@ import anima.component.ISupports;
 
 @ComponentInterface("<pokemonstro.src.model.interfaces.IStorage>")
 public interface IStorage extends ISupports {
-	public void edit(Player player) throws NonexistentEntityException, PersistenceException;
-	public void destroy(Integer id) throws NonexistentEntityException;
-	public IPlayer getPlayer(String name) throws NonexistentEntityException, EqualPlayers;
-	public void savePlayer(IPlayer player) throws PreexistingEntityException, PersistenceException ;
-	public IElement[] getAllElements(String type);
-	public boolean possibleName(String name);
+	/*Salva player ja existente no bd*/
+	public void edit(Player player) throws ControlledException;
+	/*remove player do bd*/
+	public void destroy(Integer id) throws ControlledException; 
+	 /*recupera um player do bd*/
+	public IPlayer getPlayer(String name) throws ControlledException;
+	/*cria novo player e salva*/
+	public void savePlayer(IPlayer player) throws ControlledException; 
+	/*retorna todos os elementos de certo tipo*/
+	public IElement[] getAllElements(String type); 
+	/*verifica se um player pode escolher certo nome*/
+	public boolean possibleName(String name); 
 }
