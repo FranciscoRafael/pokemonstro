@@ -3,7 +3,7 @@
 -- Server version:               5.5.27-log - MySQL Community Server (GPL)
 -- Server OS:                    Win32
 -- HeidiSQL version:             7.0.0.4053
--- Date/time:                    2015-05-09 14:46:31
+-- Date/time:                    2015-05-09 16:58:01
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -34,7 +34,6 @@ CREATE TABLE IF NOT EXISTS `building` (
   `Name` varchar(50) DEFAULT NULL,
   `x` int(11) DEFAULT NULL,
   `y` int(11) DEFAULT NULL,
-  `image` varchar(250) DEFAULT NULL,
   `EXTERNALBUILDING_ID` int(11) DEFAULT NULL,
   `CITY_ID` int(10) DEFAULT NULL,
   PRIMARY KEY (`id`),
@@ -46,10 +45,10 @@ CREATE TABLE IF NOT EXISTS `building` (
 
 -- Dumping data for table pokemonstro.building: ~3 rows (approximately)
 /*!40000 ALTER TABLE `building` DISABLE KEYS */;
-INSERT INTO `building` (`id`, `Name`, `x`, `y`, `image`, `EXTERNALBUILDING_ID`, `CITY_ID`) VALUES
-	(1, 'Academia', 20, 50, NULL, NULL, 1),
-	(2, 'porta', 25, 55, NULL, 1, 1),
-	(3, 'janela', 30, 50, NULL, 1, 1);
+INSERT INTO `building` (`id`, `Name`, `x`, `y`, `EXTERNALBUILDING_ID`, `CITY_ID`) VALUES
+	(1, 'Academia', 20, 50, NULL, 1),
+	(2, 'porta', 25, 55, 1, 1),
+	(3, 'janela', 30, 50, 1, 1);
 /*!40000 ALTER TABLE `building` ENABLE KEYS */;
 
 
@@ -179,7 +178,7 @@ CREATE TABLE IF NOT EXISTS `player` (
 INSERT INTO `player` (`ID`, `IMAGE`, `NAME`, `POSITION`, `INVENTORY_ID`, `CITY_ID`) VALUES
 	(1, NULL, 'danilo', '(2,2)', NULL, 1),
 	(151, NULL, 'pastel', '(0,0)', NULL, 1),
-	(152, NULL, 'mestre', NULL, NULL, 1);
+	(152, NULL, 'danilo', NULL, NULL, 1);
 /*!40000 ALTER TABLE `player` ENABLE KEYS */;
 
 

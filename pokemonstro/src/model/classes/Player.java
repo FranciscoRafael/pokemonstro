@@ -38,8 +38,6 @@ public class Player extends ComponentBase implements Serializable, IPlayer {
     private Integer id;
     @Column(length=50)
     private String name;
-    @Column(length=250)
-    private String image;
     @Column(length=20)
     private String position;
     @OneToOne(cascade= CascadeType.ALL)
@@ -67,15 +65,7 @@ public class Player extends ComponentBase implements Serializable, IPlayer {
     }
 
     public Image getPlayerImage() {
-        return new ImageIcon(getClass().getResource("/Images/"+ image + ".png")).getImage();
-    }
-
-    public String getImage() {
-        return image;
-    }
-
-    public void setImage(String image) {
-        this.image = image;
+        return new ImageIcon(getClass().getResource("/Images/"+ name + ".png")).getImage();
     }
 
     public String getName() {
