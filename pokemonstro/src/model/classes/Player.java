@@ -44,6 +44,7 @@ public class Player extends ComponentBase implements Serializable, IPlayer {
     private Inventory inventory;
     @OneToOne(cascade=CascadeType.ALL)
     private City city;
+    private String direction;
     
     public void setCity(City city){
     	this.city=city;
@@ -103,5 +104,13 @@ public class Player extends ComponentBase implements Serializable, IPlayer {
 
     public void setPosition(String position) {
         this.position = position;
-    }    
+    }
+
+	public void setDirection(String direction) {
+		this.direction = direction;
+	}
+
+	public String getDirection() {
+		return direction;
+	}    
 }

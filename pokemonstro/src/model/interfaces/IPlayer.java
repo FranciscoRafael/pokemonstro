@@ -1,5 +1,7 @@
 package model.interfaces;
 
+import java.awt.Image;
+
 import model.exceptions.ControlledException;
 import anima.annotation.ComponentInterface;
 import anima.component.ISupports;
@@ -16,4 +18,8 @@ public interface IPlayer extends ISupports{
 	public String getPosition();
 	public void setPosition(String position);
 	public IInventory getInventory();
+    public Image getPlayerImage();
+    public Integer getId();
+    public void setDirection(String direction);
+    public String getDirection();
 }

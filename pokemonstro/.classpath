@@ -5,6 +5,6 @@
 	<classpathentry kind="lib" path="lib/fluidweb-build20110523.jar"/>
 	<classpathentry kind="lib" path="lib/javax.persistence_2.1.0.v201304241213.jar"/>
 	<classpathentry kind="lib" path="lib/mysql-connector-java-5.1.17-bin.jar"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre7"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.launching.macosx.MacOSXType/Java SE 6 [1.6.0_65-b14-466.1]"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

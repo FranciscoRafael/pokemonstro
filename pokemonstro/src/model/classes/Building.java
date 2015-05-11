@@ -35,7 +35,6 @@ public class Building implements Serializable, IConstruction, IBuilding{
 	private String name;
 	private int x;
 	private int y;
-	private String image;
 	@OneToMany(mappedBy="ExternalBuilding")
 	/*lista de construcoes que possui*/
 	private List<Building> Internalbuilding;
@@ -75,7 +74,7 @@ public class Building implements Serializable, IConstruction, IBuilding{
 		Internalbuilding = internalbuilding;
 	}
 	public Image getImage() {
-		return new ImageIcon(getClass().getResource("/Images/"+ image + ".png")).getImage();
+		return new ImageIcon(getClass().getResource("/Images/"+ name + ".png")).getImage();
 	}
 	public Building getExternalBuilding() {
 		return ExternalBuilding;
