@@ -66,7 +66,7 @@ public class Player extends ComponentBase implements Serializable, IPlayer {
     }
 
     public Image getPlayerImage() {
-        return new ImageIcon(getClass().getResource("/Images/"+ name + ".png")).getImage();
+        return new ImageIcon(getClass().getResource("/Images/"+ direction +name + ".png")).getImage();
     }
 
     public String getName() {
