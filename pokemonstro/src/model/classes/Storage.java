@@ -44,7 +44,7 @@ public class Storage extends ComponentBase implements IStorage, Serializable{
         return emf.createEntityManager();
     }
     
-    public void edit(Player player) throws ControlledException{
+    public void edit(IPlayer player) throws ControlledException{
         EntityManager em = null;
         try {
         	/*salvando o player*/

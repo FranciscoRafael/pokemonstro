@@ -46,6 +46,9 @@ public class Player extends ComponentBase implements Serializable, IPlayer {
     private City city;
     private String direction;
     
+    private int x = 0;
+    private int y = 0;
+    
     public void setCity(City city){
     	this.city=city;
     }
@@ -66,7 +69,7 @@ public class Player extends ComponentBase implements Serializable, IPlayer {
     }
 
     public Image getPlayerImage() {
-        return new ImageIcon(getClass().getResource("/Images/"+ direction +name + ".png")).getImage();
+        return new ImageIcon(getClass().getResource("/Images/"+ direction + name + ".png")).getImage();
     }
 
     public String getName() {
@@ -98,9 +101,7 @@ public class Player extends ComponentBase implements Serializable, IPlayer {
     	}
     }
 
-    public String getPosition() {
-        return position;
-    }
+    
 
     public void setPosition(String position) {
         this.position = position;
@@ -112,5 +113,25 @@ public class Player extends ComponentBase implements Serializable, IPlayer {
 
 	public String getDirection() {
 		return direction;
+	}
+
+	@Override
+	public int getX() {
+		return x;
+	}
+
+	@Override
+	public int getY() {
+		return y;
+	}
+
+	@Override
+	public void setX(int x) {
+		this.x = x;
+	}
+
+	@Override
+	public void setY(int y) {
+		this.y = y;
 	}    
 }

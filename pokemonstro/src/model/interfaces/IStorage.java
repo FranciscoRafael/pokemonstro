@@ -13,7 +13,7 @@ import anima.component.ISupports;
 @ComponentInterface("<pokemonstro.src.model.interfaces.IStorage>")
 public interface IStorage extends ISupports {
 	/*Salva player ja existente no bd*/
-	public void edit(Player player) throws ControlledException;
+	public void edit(IPlayer player) throws ControlledException;
 	/*remove player do bd*/
 	public void destroy(Integer id) throws ControlledException; 
 	 /*recupera um player do bd*/
