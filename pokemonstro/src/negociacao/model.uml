@@ -250,356 +250,34 @@
   <packagedElement xmi:type="uml:Class" xmi:id="_R8CQAOHlEeSEKqy94dL1dw" name="List&lt;Produto>">
     <nestedClassifier xmi:type="uml:Class" xmi:id="_R8CQAeHlEeSEKqy94dL1dw" name="List&lt;ItemVenda>"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Interface" xmi:id="_JiEH0OH6EeS3_5GnumtvNQ" name="IVenda">
-    <nestedClassifier xmi:type="uml:Interface" xmi:id="_JiEH0eH6EeS3_5GnumtvNQ" name="IMovimento"/>
-    <nestedClassifier xmi:type="uml:Interface" xmi:id="_JiEH0uH6EeS3_5GnumtvNQ" name="CopyOf_IMovimento_1">
-      <nestedClassifier xmi:type="uml:Interface" xmi:id="_JiEH0-H6EeS3_5GnumtvNQ" name="IMovimento"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_JiEH1OH6EeS3_5GnumtvNQ" name="getMapa">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_JiEH1eH6EeS3_5GnumtvNQ" direction="return">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-        </ownedParameter>
-      </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_JiEH1uH6EeS3_5GnumtvNQ" name="setMapa">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_JiEH1-H6EeS3_5GnumtvNQ" name="numMapa">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-        </ownedParameter>
-      </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_JiEH2OH6EeS3_5GnumtvNQ" name="getPos">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_JiEH2eH6EeS3_5GnumtvNQ" direction="return">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-        </ownedParameter>
-      </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_JiEH2uH6EeS3_5GnumtvNQ" name="setPos">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_JiEH2-H6EeS3_5GnumtvNQ" name="posicao">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-        </ownedParameter>
-      </ownedOperation>
-    </nestedClassifier>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_JiEH3OH6EeS3_5GnumtvNQ" name="getMapa">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_JiEH3eH6EeS3_5GnumtvNQ" direction="return">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-      </ownedParameter>
-    </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_JiEH3uH6EeS3_5GnumtvNQ" name="setMapa">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_JiEH3-H6EeS3_5GnumtvNQ" name="numMapa">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-      </ownedParameter>
-    </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_JiEH4OH6EeS3_5GnumtvNQ" name="getPos">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_JiEH4eH6EeS3_5GnumtvNQ" direction="return">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-      </ownedParameter>
-    </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_JiEH4uH6EeS3_5GnumtvNQ" name="setPos">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_JiEH4-H6EeS3_5GnumtvNQ" name="posicao">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-      </ownedParameter>
-    </ownedOperation>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Interface" xmi:id="_ZXP30eH6EeS3_5GnumtvNQ" name="ITroca">
-    <nestedClassifier xmi:type="uml:Interface" xmi:id="_ZXP30uH6EeS3_5GnumtvNQ" name="IMovimento"/>
-    <nestedClassifier xmi:type="uml:Interface" xmi:id="_ZXP30-H6EeS3_5GnumtvNQ" name="CopyOf_IMovimento_1">
-      <nestedClassifier xmi:type="uml:Interface" xmi:id="_ZXP31OH6EeS3_5GnumtvNQ" name="IMovimento"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_ZXP31eH6EeS3_5GnumtvNQ" name="getMapa">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_ZXP31uH6EeS3_5GnumtvNQ" direction="return">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-        </ownedParameter>
-      </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_ZXP31-H6EeS3_5GnumtvNQ" name="setMapa">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_ZXP32OH6EeS3_5GnumtvNQ" name="numMapa">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-        </ownedParameter>
-      </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_ZXP32eH6EeS3_5GnumtvNQ" name="getPos">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_ZXP32uH6EeS3_5GnumtvNQ" direction="return">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-        </ownedParameter>
-      </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_ZXP32-H6EeS3_5GnumtvNQ" name="setPos">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_ZXP33OH6EeS3_5GnumtvNQ" name="posicao">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-        </ownedParameter>
-      </ownedOperation>
-    </nestedClassifier>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_ZXP33eH6EeS3_5GnumtvNQ" name="getMapa">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_ZXP33uH6EeS3_5GnumtvNQ" direction="return">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-      </ownedParameter>
-    </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_ZXP33-H6EeS3_5GnumtvNQ" name="setMapa">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_ZXP34OH6EeS3_5GnumtvNQ" name="numMapa">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-      </ownedParameter>
-    </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_ZXP34eH6EeS3_5GnumtvNQ" name="getPos">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_ZXP34uH6EeS3_5GnumtvNQ" direction="return">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-      </ownedParameter>
-    </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_ZXP34-H6EeS3_5GnumtvNQ" name="setPos">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_ZXP35OH6EeS3_5GnumtvNQ" name="posicao">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-      </ownedParameter>
-    </ownedOperation>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Interface" xmi:id="_bcBL8eH6EeS3_5GnumtvNQ" name="ICompra">
-    <nestedClassifier xmi:type="uml:Interface" xmi:id="_bcBL8uH6EeS3_5GnumtvNQ" name="IMovimento"/>
-    <nestedClassifier xmi:type="uml:Interface" xmi:id="_bcBL8-H6EeS3_5GnumtvNQ" name="CopyOf_IMovimento_1">
-      <nestedClassifier xmi:type="uml:Interface" xmi:id="_bcBL9OH6EeS3_5GnumtvNQ" name="IMovimento"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_bcBL9eH6EeS3_5GnumtvNQ" name="getMapa">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_bcBL9uH6EeS3_5GnumtvNQ" direction="return">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-        </ownedParameter>
-      </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_bcBL9-H6EeS3_5GnumtvNQ" name="setMapa">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_bcBL-OH6EeS3_5GnumtvNQ" name="numMapa">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-        </ownedParameter>
-      </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_bcBL-eH6EeS3_5GnumtvNQ" name="getPos">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_bcBL-uH6EeS3_5GnumtvNQ" direction="return">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-        </ownedParameter>
-      </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_bcBL--H6EeS3_5GnumtvNQ" name="setPos">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_bcBL_OH6EeS3_5GnumtvNQ" name="posicao">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-        </ownedParameter>
-      </ownedOperation>
-    </nestedClassifier>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_bcBL_eH6EeS3_5GnumtvNQ" name="getMapa">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_bcBL_uH6EeS3_5GnumtvNQ" direction="return">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-      </ownedParameter>
-    </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_bcBL_-H6EeS3_5GnumtvNQ" name="setMapa">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_bcBMAOH6EeS3_5GnumtvNQ" name="numMapa">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-      </ownedParameter>
-    </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_bcBMAeH6EeS3_5GnumtvNQ" name="getPos">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_bcBMAuH6EeS3_5GnumtvNQ" direction="return">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-      </ownedParameter>
-    </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_bcBMA-H6EeS3_5GnumtvNQ" name="setPos">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_bcBMBOH6EeS3_5GnumtvNQ" name="posicao">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-      </ownedParameter>
-    </ownedOperation>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Interface" xmi:id="_bcBMBeH6EeS3_5GnumtvNQ" name="ICitens">
-    <nestedClassifier xmi:type="uml:Interface" xmi:id="_bcBMBuH6EeS3_5GnumtvNQ" name="IConexao"/>
-    <nestedClassifier xmi:type="uml:Interface" xmi:id="_bcBMB-H6EeS3_5GnumtvNQ" name="IInventario"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_bcBMCOH6EeS3_5GnumtvNQ" name="connect">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_bcBMCeH6EeS3_5GnumtvNQ" name="obj"/>
-    </ownedOperation>
-  </packagedElement>
   <packagedElement xmi:type="uml:Component" xmi:id="_9ZORQOH6EeS3_5GnumtvNQ" name="Negociacao">
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_zQLV8OIAEeS8cOdThLqgNQ" name="venda" type="_HoGt0OIAEeS8cOdThLqgNQ">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_zQLV8OIAEeS8cOdThLqgNQ" name="LojaComponent" type="_SiBJ4PtrEeSHJ-jrLeNJaA">
       <qualifier xmi:type="uml:Port" xmi:id="_0HuXEOICEeSWTKoLjt3S8w" name="venda" type="_G8SAguF6EeSseJlhwIOsyA" aggregation="composite"/>
     </ownedAttribute>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_e-hlMOIBEeS8cOdThLqgNQ" name="compra" type="_eBnqUOH8EeS3_5GnumtvNQ"/>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_jdOlIOIBEeS8cOdThLqgNQ" name="troca" type="_TCkmAOIAEeS8cOdThLqgNQ"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_jdOlIOIBEeS8cOdThLqgNQ" name="PostoTrocaComponent" type="_TWqS4PtrEeSHJ-jrLeNJaA"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_q5n_MPtxEeSHJ-jrLeNJaA" name="LojaGUIComponent" type="_k9xwAPtqEeSHJ-jrLeNJaA"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_w_CeQPtxEeSHJ-jrLeNJaA" name="PostoTrocaGUIComponent" type="_sK1zoPtqEeSHJ-jrLeNJaA"/>
+    <ownedConnector xmi:type="uml:Connector" xmi:id="_FMA4cPtzEeSHJ-jrLeNJaA" name="Connector1">
+      <end xmi:type="uml:ConnectorEnd" xmi:id="_FMDUsPtzEeSHJ-jrLeNJaA" role="_q5n_MPtxEeSHJ-jrLeNJaA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FMDUsftzEeSHJ-jrLeNJaA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FMDUsvtzEeSHJ-jrLeNJaA" value="1"/>
+      </end>
+      <end xmi:type="uml:ConnectorEnd" xmi:id="_FMDUs_tzEeSHJ-jrLeNJaA" role="_zQLV8OIAEeS8cOdThLqgNQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FMDUtPtzEeSHJ-jrLeNJaA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FMDUtftzEeSHJ-jrLeNJaA" value="1"/>
+      </end>
+    </ownedConnector>
+    <ownedConnector xmi:type="uml:Connector" xmi:id="_F6S6wPtzEeSHJ-jrLeNJaA" name="Connector2">
+      <end xmi:type="uml:ConnectorEnd" xmi:id="_F6S6wftzEeSHJ-jrLeNJaA" role="_w_CeQPtxEeSHJ-jrLeNJaA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_F6S6wvtzEeSHJ-jrLeNJaA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_F6S6w_tzEeSHJ-jrLeNJaA" value="1"/>
+      </end>
+      <end xmi:type="uml:ConnectorEnd" xmi:id="_F6S6xPtzEeSHJ-jrLeNJaA" role="_jdOlIOIBEeS8cOdThLqgNQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_F6S6xftzEeSHJ-jrLeNJaA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_F6S6xvtzEeSHJ-jrLeNJaA" value="1"/>
+      </end>
+    </ownedConnector>
   </packagedElement>
-  <packagedElement xmi:type="uml:Component" xmi:id="_eBnqUOH8EeS3_5GnumtvNQ" name="Compra">
-    <ownedAttribute xmi:type="uml:Port" xmi:id="_-DJlwOH_EeS8cOdThLqgNQ" name="compra" type="_G8SnkOF6EeSseJlhwIOsyA" aggregation="composite"/>
-    <ownedAttribute xmi:type="uml:Port" xmi:id="_ENDjQOIAEeS8cOdThLqgNQ" name="inventario" type="_dTfp8OIFEeSWTKoLjt3S8w" aggregation="composite"/>
-    <ownedAttribute xmi:type="uml:Port" xmi:id="_SdcYUOIDEeSWTKoLjt3S8w" name="compra" type="_G8SnkOF6EeSseJlhwIOsyA" aggregation="composite"/>
-    <ownedAttribute xmi:type="uml:Port" xmi:id="_qViO0OIDEeSWTKoLjt3S8w" name="inventario" type="_dTfp8OIFEeSWTKoLjt3S8w" aggregation="composite"/>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Component" xmi:id="_HoGt0OIAEeS8cOdThLqgNQ" name="Venda">
-    <ownedAttribute xmi:type="uml:Port" xmi:id="_HoGt0eIAEeS8cOdThLqgNQ" name="compra" type="_G8SAguF6EeSseJlhwIOsyA" aggregation="composite"/>
-    <ownedAttribute xmi:type="uml:Port" xmi:id="_HoGt0uIAEeS8cOdThLqgNQ" name="inventario" type="_dTfp8OIFEeSWTKoLjt3S8w" aggregation="composite"/>
-    <ownedAttribute xmi:type="uml:Port" xmi:id="_FrXM8OIDEeSWTKoLjt3S8w" name="venda" type="_G8SAguF6EeSseJlhwIOsyA" aggregation="composite"/>
-    <ownedAttribute xmi:type="uml:Port" xmi:id="_njwDsOIDEeSWTKoLjt3S8w" name="inventario" type="_dTfp8OIFEeSWTKoLjt3S8w" aggregation="composite"/>
-    <packagedElement xmi:type="uml:Component" xmi:id="_SayNQOIAEeS8cOdThLqgNQ" name="Venda">
-      <ownedAttribute xmi:type="uml:Port" xmi:id="_SayNQeIAEeS8cOdThLqgNQ" name="compra" type="_G8SAguF6EeSseJlhwIOsyA" aggregation="composite"/>
-      <ownedAttribute xmi:type="uml:Port" xmi:id="_SayNQuIAEeS8cOdThLqgNQ" name="itens jogador" aggregation="composite"/>
-    </packagedElement>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Component" xmi:id="_TCkmAOIAEeS8cOdThLqgNQ" name="Troca">
-    <ownedAttribute xmi:type="uml:Port" xmi:id="_TCkmAeIAEeS8cOdThLqgNQ" name="troca" type="_G8SAl-F6EeSseJlhwIOsyA" aggregation="composite"/>
-    <ownedAttribute xmi:type="uml:Port" xmi:id="_TCkmAuIAEeS8cOdThLqgNQ" name="inventario" type="_dTfp8OIFEeSWTKoLjt3S8w" aggregation="composite"/>
-    <ownedAttribute xmi:type="uml:Port" xmi:id="_TZM18OIDEeSWTKoLjt3S8w" name="troca" type="_ZXP30eH6EeS3_5GnumtvNQ" aggregation="composite"/>
-    <ownedAttribute xmi:type="uml:Port" xmi:id="_p75m0OIDEeSWTKoLjt3S8w" name="inventario" type="_dTfp8OIFEeSWTKoLjt3S8w" aggregation="composite"/>
-    <packagedElement xmi:type="uml:Component" xmi:id="_TCkmA-IAEeS8cOdThLqgNQ" name="Venda">
-      <ownedAttribute xmi:type="uml:Port" xmi:id="_TCkmBOIAEeS8cOdThLqgNQ" name="compra" type="_G8SAguF6EeSseJlhwIOsyA" aggregation="composite"/>
-      <ownedAttribute xmi:type="uml:Port" xmi:id="_TCkmBeIAEeS8cOdThLqgNQ" name="itens jogador" aggregation="composite"/>
-    </packagedElement>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Interface" xmi:id="_Z8GCkOIAEeS8cOdThLqgNQ" name="IVenda">
-    <nestedClassifier xmi:type="uml:Interface" xmi:id="_Z8GCkeIAEeS8cOdThLqgNQ" name="IMovimento"/>
-    <nestedClassifier xmi:type="uml:Interface" xmi:id="_Z8GCkuIAEeS8cOdThLqgNQ" name="CopyOf_IMovimento_1">
-      <nestedClassifier xmi:type="uml:Interface" xmi:id="_Z8GCk-IAEeS8cOdThLqgNQ" name="IMovimento"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_Z8GClOIAEeS8cOdThLqgNQ" name="getMapa">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Z8GCleIAEeS8cOdThLqgNQ" direction="return">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-        </ownedParameter>
-      </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_Z8GCluIAEeS8cOdThLqgNQ" name="setMapa">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Z8GCl-IAEeS8cOdThLqgNQ" name="numMapa">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-        </ownedParameter>
-      </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_Z8GCmOIAEeS8cOdThLqgNQ" name="getPos">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Z8GCmeIAEeS8cOdThLqgNQ" direction="return">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-        </ownedParameter>
-      </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_Z8GCmuIAEeS8cOdThLqgNQ" name="setPos">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Z8GCm-IAEeS8cOdThLqgNQ" name="posicao">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-        </ownedParameter>
-      </ownedOperation>
-    </nestedClassifier>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_Z8GCnOIAEeS8cOdThLqgNQ" name="getMapa">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_Z8GCneIAEeS8cOdThLqgNQ" direction="return">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-      </ownedParameter>
-    </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_Z8GCnuIAEeS8cOdThLqgNQ" name="setMapa">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_Z8GCn-IAEeS8cOdThLqgNQ" name="numMapa">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-      </ownedParameter>
-    </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_Z8GCoOIAEeS8cOdThLqgNQ" name="getPos">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_Z8GCoeIAEeS8cOdThLqgNQ" direction="return">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-      </ownedParameter>
-    </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_Z8GCouIAEeS8cOdThLqgNQ" name="setPos">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_Z8GCo-IAEeS8cOdThLqgNQ" name="posicao">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-      </ownedParameter>
-    </ownedOperation>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Interface" xmi:id="_bDK_YOIAEeS8cOdThLqgNQ" name="ICompra">
-    <nestedClassifier xmi:type="uml:Interface" xmi:id="_bDK_YeIAEeS8cOdThLqgNQ" name="IMovimento"/>
-    <nestedClassifier xmi:type="uml:Interface" xmi:id="_bDK_YuIAEeS8cOdThLqgNQ" name="CopyOf_IMovimento_1">
-      <nestedClassifier xmi:type="uml:Interface" xmi:id="_bDK_Y-IAEeS8cOdThLqgNQ" name="IMovimento"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_bDK_ZOIAEeS8cOdThLqgNQ" name="getMapa">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_bDK_ZeIAEeS8cOdThLqgNQ" direction="return">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-        </ownedParameter>
-      </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_bDK_ZuIAEeS8cOdThLqgNQ" name="setMapa">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_bDK_Z-IAEeS8cOdThLqgNQ" name="numMapa">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-        </ownedParameter>
-      </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_bDK_aOIAEeS8cOdThLqgNQ" name="getPos">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_bDK_aeIAEeS8cOdThLqgNQ" direction="return">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-        </ownedParameter>
-      </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_bDK_auIAEeS8cOdThLqgNQ" name="setPos">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_bDK_a-IAEeS8cOdThLqgNQ" name="posicao">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-        </ownedParameter>
-      </ownedOperation>
-    </nestedClassifier>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_bDK_bOIAEeS8cOdThLqgNQ" name="getMapa">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_bDK_beIAEeS8cOdThLqgNQ" direction="return">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-      </ownedParameter>
-    </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_bDK_buIAEeS8cOdThLqgNQ" name="setMapa">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_bDK_b-IAEeS8cOdThLqgNQ" name="numMapa">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-      </ownedParameter>
-    </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_bDK_cOIAEeS8cOdThLqgNQ" name="getPos">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_bDK_ceIAEeS8cOdThLqgNQ" direction="return">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-      </ownedParameter>
-    </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_bDK_cuIAEeS8cOdThLqgNQ" name="setPos">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_bDK_c-IAEeS8cOdThLqgNQ" name="posicao">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-      </ownedParameter>
-    </ownedOperation>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Interface" xmi:id="_cay5oOIAEeS8cOdThLqgNQ" name="ITroca">
-    <nestedClassifier xmi:type="uml:Interface" xmi:id="_cay5oeIAEeS8cOdThLqgNQ" name="IMovimento"/>
-    <nestedClassifier xmi:type="uml:Interface" xmi:id="_cay5ouIAEeS8cOdThLqgNQ" name="CopyOf_IMovimento_1">
-      <nestedClassifier xmi:type="uml:Interface" xmi:id="_cay5o-IAEeS8cOdThLqgNQ" name="IMovimento"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_cay5pOIAEeS8cOdThLqgNQ" name="getMapa">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_cay5peIAEeS8cOdThLqgNQ" direction="return">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-        </ownedParameter>
-      </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_cay5puIAEeS8cOdThLqgNQ" name="setMapa">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_cay5p-IAEeS8cOdThLqgNQ" name="numMapa">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-        </ownedParameter>
-      </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_cay5qOIAEeS8cOdThLqgNQ" name="getPos">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_cay5qeIAEeS8cOdThLqgNQ" direction="return">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-        </ownedParameter>
-      </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_cay5quIAEeS8cOdThLqgNQ" name="setPos">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_cay5q-IAEeS8cOdThLqgNQ" name="posicao">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-        </ownedParameter>
-      </ownedOperation>
-    </nestedClassifier>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_cay5rOIAEeS8cOdThLqgNQ" name="getMapa">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_cay5reIAEeS8cOdThLqgNQ" direction="return">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-      </ownedParameter>
-    </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_cay5ruIAEeS8cOdThLqgNQ" name="setMapa">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_cay5r-IAEeS8cOdThLqgNQ" name="numMapa">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-      </ownedParameter>
-    </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_cay5sOIAEeS8cOdThLqgNQ" name="getPos">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_cay5seIAEeS8cOdThLqgNQ" direction="return">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-      </ownedParameter>
-    </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_cay5suIAEeS8cOdThLqgNQ" name="setPos">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_cay5s-IAEeS8cOdThLqgNQ" name="posicao">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-      </ownedParameter>
-    </ownedOperation>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Interface" xmi:id="_eTWWsOIAEeS8cOdThLqgNQ" name="ICitens">
-    <nestedClassifier xmi:type="uml:Interface" xmi:id="_eTWWseIAEeS8cOdThLqgNQ" name="IConexao"/>
-    <nestedClassifier xmi:type="uml:Interface" xmi:id="_eTWWsuIAEeS8cOdThLqgNQ" name="IInventario"/>
-    <nestedClassifier xmi:type="uml:Interface" xmi:id="_eTWWs-IAEeS8cOdThLqgNQ" name="IItens"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_eTWWtOIAEeS8cOdThLqgNQ" name="connect">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_eTWWteIAEeS8cOdThLqgNQ" name="obj"/>
-    </ownedOperation>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Interface" xmi:id="_ftWPgOIAEeS8cOdThLqgNQ" name="ICitens">
-    <nestedClassifier xmi:type="uml:Interface" xmi:id="_ftWPgeIAEeS8cOdThLqgNQ" name="IConexao"/>
-    <nestedClassifier xmi:type="uml:Interface" xmi:id="_ftWPguIAEeS8cOdThLqgNQ" name="IInventario"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_ftWPg-IAEeS8cOdThLqgNQ" name="connect">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_ftWPhOIAEeS8cOdThLqgNQ" name="obj"/>
-    </ownedOperation>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Interface" xmi:id="_ikCv0OIAEeS8cOdThLqgNQ" name="ICitens">
-    <nestedClassifier xmi:type="uml:Interface" xmi:id="_ikCv0eIAEeS8cOdThLqgNQ" name="IConexao"/>
-    <nestedClassifier xmi:type="uml:Interface" xmi:id="_ikCv0uIAEeS8cOdThLqgNQ" name="IInventario"/>
-    <nestedClassifier xmi:type="uml:Interface" xmi:id="_ikCv0-IAEeS8cOdThLqgNQ" name="IItens"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_ikCv1OIAEeS8cOdThLqgNQ" name="connect">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_ikCv1eIAEeS8cOdThLqgNQ" name="obj"/>
-    </ownedOperation>
-  </packagedElement>
-  <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_s0mZoOIAEeS8cOdThLqgNQ" name="Realization7" client="_TCkmAeIAEeS8cOdThLqgNQ" supplier="_cay5oOIAEeS8cOdThLqgNQ" contract="_cay5oOIAEeS8cOdThLqgNQ"/>
-  <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_tRzTAOIAEeS8cOdThLqgNQ" name="Realization8" client="_HoGt0eIAEeS8cOdThLqgNQ" supplier="_Z8GCkOIAEeS8cOdThLqgNQ" contract="_Z8GCkOIAEeS8cOdThLqgNQ"/>
-  <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_t2waMOIAEeS8cOdThLqgNQ" name="Realization9" client="_-DJlwOH_EeS8cOdThLqgNQ" supplier="_bDK_YOIAEeS8cOdThLqgNQ" contract="_bDK_YOIAEeS8cOdThLqgNQ"/>
-  <packagedElement xmi:type="uml:Usage" xmi:id="_ueiy8OIAEeS8cOdThLqgNQ" name="Usage3" client="_TCkmAuIAEeS8cOdThLqgNQ" supplier="_eTWWsOIAEeS8cOdThLqgNQ"/>
-  <packagedElement xmi:type="uml:Usage" xmi:id="_vHEykOIAEeS8cOdThLqgNQ" name="Usage4" client="_HoGt0uIAEeS8cOdThLqgNQ" supplier="_ikCv0OIAEeS8cOdThLqgNQ"/>
-  <packagedElement xmi:type="uml:Usage" xmi:id="_wIo9QOIAEeS8cOdThLqgNQ" name="Usage5" client="_ENDjQOIAEeS8cOdThLqgNQ" supplier="_ftWPgOIAEeS8cOdThLqgNQ"/>
-  <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_O2eRoOIDEeSWTKoLjt3S8w" name="Realization4" client="_FrXM8OIDEeSWTKoLjt3S8w" supplier="_JiEH0OH6EeS3_5GnumtvNQ" contract="_JiEH0OH6EeS3_5GnumtvNQ"/>
-  <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_eH2xAOIDEeSWTKoLjt3S8w" name="Realization5" client="_SdcYUOIDEeSWTKoLjt3S8w" supplier="_bcBL8eH6EeS3_5GnumtvNQ" contract="_bcBL8eH6EeS3_5GnumtvNQ"/>
-  <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_gqOnIOIDEeSWTKoLjt3S8w" name="Realization6" client="_TZM18OIDEeSWTKoLjt3S8w" supplier="_ZXP30eH6EeS3_5GnumtvNQ" contract="_ZXP30eH6EeS3_5GnumtvNQ"/>
-  <packagedElement xmi:type="uml:Usage" xmi:id="__sVNQOIDEeSWTKoLjt3S8w" name="Usage1" client="_njwDsOIDEeSWTKoLjt3S8w" supplier="_bcBMBeH6EeS3_5GnumtvNQ"/>
-  <packagedElement xmi:type="uml:Usage" xmi:id="_Ahrg4OIEEeSWTKoLjt3S8w" name="Usage2" client="_qViO0OIDEeSWTKoLjt3S8w" supplier="_bcBMBeH6EeS3_5GnumtvNQ"/>
   <packagedElement xmi:type="uml:Interface" xmi:id="_dTfp8OIFEeSWTKoLjt3S8w" name="ICitens">
     <nestedClassifier xmi:type="uml:Interface" xmi:id="_dTfp8eIFEeSWTKoLjt3S8w" name="IConexao"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_dTfp8uIFEeSWTKoLjt3S8w" name="connect">
@@ -609,6 +287,65 @@
   <packagedElement xmi:type="uml:Interface" xmi:id="_2x2WkOKoEeSGV_wEHwI-8A" name="INome">
     <nestedClassifier xmi:type="uml:Interface" xmi:id="_2x2WkeKoEeSGV_wEHwI-8A" name="IConexao"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Usage" xmi:id="_Mx6fAOKqEeSGV_wEHwI-8A" name="Usage0" client="_p75m0OIDEeSWTKoLjt3S8w" supplier="_bcBMBeH6EeS3_5GnumtvNQ"/>
-  <packagedElement xmi:type="uml:Usage" xmi:id="_OfvSwOKqEeSGV_wEHwI-8A" name="Usage6" client="_njwDsOIDEeSWTKoLjt3S8w" supplier="_bcBMBeH6EeS3_5GnumtvNQ"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_k9xwAPtqEeSHJ-jrLeNJaA" name="LojaGUI">
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_5KTTsPtqEeSHJ-jrLeNJaA" name="Loja" type="_-00KAPtrEeSHJ-jrLeNJaA" aggregation="composite"/>
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_F18f4PtrEeSHJ-jrLeNJaA" name="CarroCompra" type="_k73ZkPtsEeSHJ-jrLeNJaA" aggregation="composite"/>
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_dkkRUPtrEeSHJ-jrLeNJaA" name="EfetuaTransacao" type="_2P34APtsEeSHJ-jrLeNJaA" aggregation="composite"/>
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_4FGiAPtxEeSHJ-jrLeNJaA" name="Loja" type="_-00KAPtrEeSHJ-jrLeNJaA" aggregation="composite"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_sK1zoPtqEeSHJ-jrLeNJaA" name="PostoTrocaGUI">
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_-hL40PtqEeSHJ-jrLeNJaA" name="PostoTroca" type="_TEqugPtsEeSHJ-jrLeNJaA" aggregation="composite"/>
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_GZ9y8PtrEeSHJ-jrLeNJaA" name="EfetuaTransacao" type="_2P34APtsEeSHJ-jrLeNJaA" aggregation="composite"/>
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_4gFN0PtxEeSHJ-jrLeNJaA" name="PostoTroca" type="_-00KAPtrEeSHJ-jrLeNJaA" aggregation="composite"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_SiBJ4PtrEeSHJ-jrLeNJaA" name="Loja">
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_eGJUYPtrEeSHJ-jrLeNJaA" name="CarroCompra" type="_k73ZkPtsEeSHJ-jrLeNJaA" aggregation="composite"/>
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_fIdtAPtrEeSHJ-jrLeNJaA" name="Itens" type="_kg1YgPtuEeSHJ-jrLeNJaA" aggregation="composite"/>
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_kB6IMPtrEeSHJ-jrLeNJaA" name="EfetuaTransacao" type="_2P34APtsEeSHJ-jrLeNJaA" aggregation="composite"/>
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_3EARYPtxEeSHJ-jrLeNJaA" name="Itens" type="_kg1YgPtuEeSHJ-jrLeNJaA" aggregation="composite"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_TWqS4PtrEeSHJ-jrLeNJaA" name="PostoTroca">
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_errqYPtrEeSHJ-jrLeNJaA" name="EfetuaTransacao" type="_2P34APtsEeSHJ-jrLeNJaA" aggregation="composite"/>
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_fhJ50PtrEeSHJ-jrLeNJaA" name="Itens" type="_kg1YgPtuEeSHJ-jrLeNJaA" aggregation="composite"/>
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_3oxLUPtxEeSHJ-jrLeNJaA" name="Itens" type="_kg1YgPtuEeSHJ-jrLeNJaA" aggregation="composite"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_-00KAPtrEeSHJ-jrLeNJaA" name="ILojaGUI"/>
+  <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_IfUgcPtsEeSHJ-jrLeNJaA" name="Realization0" client="_5KTTsPtqEeSHJ-jrLeNJaA" supplier="_-00KAPtrEeSHJ-jrLeNJaA" contract="_-00KAPtrEeSHJ-jrLeNJaA"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_TEqugPtsEeSHJ-jrLeNJaA" name="IPostoTrocaGUI"/>
+  <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_dwszYPtsEeSHJ-jrLeNJaA" name="Realization1" client="_-hL40PtqEeSHJ-jrLeNJaA" supplier="_TEqugPtsEeSHJ-jrLeNJaA" contract="_TEqugPtsEeSHJ-jrLeNJaA"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_k73ZkPtsEeSHJ-jrLeNJaA" name="ICarrinhoCompra">
+    <nestedClassifier xmi:type="uml:Interface" xmi:id="_sMBYAPttEeSHJ-jrLeNJaA" name="ICarrinhoCompra"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_xwvaQPtsEeSHJ-jrLeNJaA" name="Realization2" client="_eGJUYPtrEeSHJ-jrLeNJaA" supplier="_k73ZkPtsEeSHJ-jrLeNJaA" contract="_k73ZkPtsEeSHJ-jrLeNJaA"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_2P34APtsEeSHJ-jrLeNJaA" name="IEfetuaTransacao">
+    <nestedClassifier xmi:type="uml:Interface" xmi:id="_jdT7cPttEeSHJ-jrLeNJaA" name="IEfetuaTransacao"/>
+    <nestedClassifier xmi:type="uml:Interface" xmi:id="_-83A0PttEeSHJ-jrLeNJaA" name="CopyOf_IEfetuaTransacao_1">
+      <nestedClassifier xmi:type="uml:Interface" xmi:id="_-83A0fttEeSHJ-jrLeNJaA" name="IEfetuaTransacao"/>
+    </nestedClassifier>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="__EAnIPtsEeSHJ-jrLeNJaA" name="Realization3" client="_kB6IMPtrEeSHJ-jrLeNJaA" supplier="_2P34APtsEeSHJ-jrLeNJaA" contract="_2P34APtsEeSHJ-jrLeNJaA"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_jzV10PttEeSHJ-jrLeNJaA" name="IEfetuaTransacao"/>
+  <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_pnwEcPttEeSHJ-jrLeNJaA" name="Realization4" client="_errqYPtrEeSHJ-jrLeNJaA" supplier="_jzV10PttEeSHJ-jrLeNJaA" contract="_jzV10PttEeSHJ-jrLeNJaA"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_tMsx4PttEeSHJ-jrLeNJaA">
+    <nestedClassifier xmi:type="uml:Interface" xmi:id="_tMsx4fttEeSHJ-jrLeNJaA" name="ICarrinhoCompra"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_vS5pYPttEeSHJ-jrLeNJaA" name="Usage0" client="_F18f4PtrEeSHJ-jrLeNJaA" supplier="_tMsx4PttEeSHJ-jrLeNJaA"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="__LAKgPttEeSHJ-jrLeNJaA">
+    <nestedClassifier xmi:type="uml:Interface" xmi:id="__LAKgfttEeSHJ-jrLeNJaA" name="IEfetuaTransacao"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_BDeIAPtuEeSHJ-jrLeNJaA" name="Usage1" client="_dkkRUPtrEeSHJ-jrLeNJaA" supplier="__LAKgPttEeSHJ-jrLeNJaA"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_C5tQ4PtuEeSHJ-jrLeNJaA"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_Ekf-wPtuEeSHJ-jrLeNJaA" name="Usage2" client="_GZ9y8PtrEeSHJ-jrLeNJaA" supplier="_C5tQ4PtuEeSHJ-jrLeNJaA"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_kg1YgPtuEeSHJ-jrLeNJaA" name="IInventarioItens"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_4smuQPtuEeSHJ-jrLeNJaA" name="Usage3" client="_fIdtAPtrEeSHJ-jrLeNJaA" supplier="_kg1YgPtuEeSHJ-jrLeNJaA"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_6tBt4PtuEeSHJ-jrLeNJaA" name="IInventarioItens"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_858RYPtuEeSHJ-jrLeNJaA" name="Usage4" client="_fhJ50PtrEeSHJ-jrLeNJaA" supplier="_6tBt4PtuEeSHJ-jrLeNJaA"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_DhmagPtyEeSHJ-jrLeNJaA" name="ILojaGUI"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_FropIPtyEeSHJ-jrLeNJaA" name="IPostoTrocaGUI"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_b3hcgPtyEeSHJ-jrLeNJaA" name="IInventarioItens"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_g-tYwPtyEeSHJ-jrLeNJaA" name="IInventarioItens"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_o2z9cPtyEeSHJ-jrLeNJaA" name="Usage5" client="_3EARYPtxEeSHJ-jrLeNJaA" supplier="_b3hcgPtyEeSHJ-jrLeNJaA"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_pnCggPtyEeSHJ-jrLeNJaA" name="Usage6" client="_3oxLUPtxEeSHJ-jrLeNJaA" supplier="_g-tYwPtyEeSHJ-jrLeNJaA"/>
+  <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_0ay-APtyEeSHJ-jrLeNJaA" name="Realization5" client="_4FGiAPtxEeSHJ-jrLeNJaA" supplier="_DhmagPtyEeSHJ-jrLeNJaA" contract="_DhmagPtyEeSHJ-jrLeNJaA"/>
+  <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_1Oqq8PtyEeSHJ-jrLeNJaA" name="Realization6" client="_4gFN0PtxEeSHJ-jrLeNJaA" supplier="_FropIPtyEeSHJ-jrLeNJaA" contract="_FropIPtyEeSHJ-jrLeNJaA"/>
 </uml:Model>
