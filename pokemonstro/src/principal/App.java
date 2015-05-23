@@ -16,25 +16,24 @@ public class App {
 		Storage storage=new Storage();
 		Player player;
 		try {		
-			player=new Player();
-			player.setName("mestre");
-			storage.savePlayer(player);
+			player = new Player();
+			//player.setName("mestre2");
+			//storage.savePlayer(player);
 			/*No inicio do jogo, carregar nome dos players para o usuario escolher*/
 			List<String> players = storage.getPossiblePlayers();
 			for(String p:players){
 				/*pegando um player qualquer do bd pelo nome*/
 				player = (Player) storage.getPlayer(p);
-				/*teste para ver se carregou*/
-				/*imprime nome do player*/
+				/*
 				System.out.println(player.getName());
 				City city=player.getCity();
-				/*imprime nome da cidade*/
+				
 				System.out.println(city.getName());
 				List<Building> build = city.getInternalbuilding();
-				/*imprime construcoes*/
+				
 				for(Building builds:build){
 					System.out.println(builds.getName());
-				}
+				}*/
 				storage.edit(player);				
 			}
 		}catch (ControlledException e) {

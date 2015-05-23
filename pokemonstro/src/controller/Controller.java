@@ -73,16 +73,22 @@ public class Controller {
     private void LoadContent() {
     	try {
 			player.setName("mestre");
+    		player.setX(0);
+    		player.setY(0);
+    		player.setName("player");
+    		player.setDirection("");
+    		
 			List<String> players = storage.getPossiblePlayers();
-			for(String p:players){
+			for (String p : players) {
 				player = (IPlayer) storage.getPlayer(p);
 				System.out.println(player.getName());
-				City city = player.getCity();
-				System.out.println(city.getName());
-				List<Building> build = city.getInternalbuilding();
-				for(Building builds:build){
-					System.out.println(builds.getName());
-				}
+				
+				
+				city = player.getCity();
+				//System.out.println(city.getName());
+				//List<Building> build = city.getInternalbuilding();
+				//for(Building builds:build)
+					//System.out.println(builds.getName());*/
 				storage.edit(player);
 			}
 		}catch (ControlledException e) {
@@ -95,9 +101,9 @@ public class Controller {
     }
 
     private void Initialize() {
-    	player = new Player();
-    	city   = new City();
-    	Storage storage = new Storage();
+    	//player  = new Player();
+    	city    = new City();
+    	storage = new Storage();
     	this.loadingState = new LoadingState();
     	this.movingState  = new MovingState();
     	this.menuState    = new MenuState();

@@ -34,7 +34,7 @@ public class View extends JPanel {
     }
 
     public void Draw(Graphics2D g2d) {
-    	camera.setToTranslation(Controller.player.getX(), Controller.player.getY());
+    	//camera.setToTranslation(Controller.player.getX(), Controller.player.getY());
     	
     	/*for (Building b : Controller.city.getInternalbuilding()) {
 			//buildings.setToIdentity();
