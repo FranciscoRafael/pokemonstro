@@ -34,54 +34,30 @@ public abstract class Element extends ComponentBase implements Serializable, IEl
     private String image;
     /*duracao do efeito do item ou vida do pokemonstro*/
     private int life;
-	@Override
+	
+	public void setId(Integer id) {
+		this.id = id;
+	}
 	public String getName() {
-		return this.name;
+		return name;
 	}
-	@Override
 	public void setName(String name) {
-		// TODO Auto-generated method stub
-		
+		this.name = name;
 	}
-	@Override
 	public String getType() {
-		// TODO Auto-generated method stub
-		return null;
+		return type;
 	}
-	@Override
 	public void setType(String type) {
-		// TODO Auto-generated method stub
-		
+		this.type = type;
 	}
-	@Override
+	public void setImage(String image) {
+		this.image = image;
+	}
 	public int getLife() {
-		// TODO Auto-generated method stub
 		return life;
 	}
-	@Override
 	public void setLife(int life) {
-		// TODO Auto-generated method stub
-		
-	}
-	@Override
-	public int getQty() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-	@Override
-	public void setQty(int qty) {
-		// TODO Auto-generated method stub
-		
-	}
-	@Override
-	public Image getImage() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	@Override
-	public void setImage(Image image) {
-		// TODO Auto-generated method stub
-		
+		this.life = life;
 	}
 	@Override
 	public abstract IAction[] getActions();

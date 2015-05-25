@@ -58,8 +58,8 @@ public class Storage extends ComponentBase implements IStorage, Serializable{
             if (msg == null || msg.length() == 0) {
                 Integer id = player.getId();
                 if (getPlayer(id) == null) {
-                    throw new NonexistentEntityException("Monstro, o player ainda não existe.\n"
-                    									+ "Não é possivel editá-lo");
+                    throw new NonexistentEntityException("Monstro, o player ainda nao existe.\n"
+                    									+ "Nao eh possivel edita-lo");
                 }else{
                 	throw new ControlledException("Monstro, ocorreu um erro ao salvar o player.\n",ex);
                 }
@@ -90,8 +90,8 @@ public class Storage extends ComponentBase implements IStorage, Serializable{
                 player.getId();
             } catch (EntityNotFoundException enfe) {
             	/*informa que o player nao existe*/
-                throw new NonexistentEntityException("Monstro, esse player não existe.\n"
-                									+ "Não é possível excluí-lo.", enfe);
+                throw new NonexistentEntityException("Monstro, esse player nï¿½o existe.\n"
+                									+ "Nï¿½o ï¿½ possï¿½vel excluï¿½-lo.", enfe);
             }
             /*remove o player*/
             em.remove(player);
@@ -122,19 +122,19 @@ public class Storage extends ComponentBase implements IStorage, Serializable{
             return (IPlayer) query.getSingleResult();            
         } catch (NoResultException enfe) {
         	/*Erro: player nao encontrado*/
-            throw new NonexistentEntityException("Monstro, não existe jogador com esse nome.\n"
-            									  + "Não é possível carregá-lo", enfe);
+            throw new NonexistentEntityException("Monstro, nï¿½o existe jogador com esse nome.\n"
+            									  + "Nï¿½o ï¿½ possï¿½vel carregï¿½-lo", enfe);
         } catch (NonUniqueResultException e) {
         	/*Erro: mais de um player com esse nome*/
         	throw new EqualPlayersException("Monstro, o frango que fez o jogo\n"
 					  				+ "deixou voce criar mais de um player\n"
-					  				+ "com o mesmo nome e agora não sabe qual carregar.", e);
+					  				+ "com o mesmo nome e agora nï¿½o sabe qual carregar.", e);
 		}finally {
             em.close();
         }
 	}
 	
-	public void savePlayer(IPlayer player) throws ControlledException {
+	public void savePlayer(Object player) throws ControlledException {
 		EntityManager em = null;
         try {
         	/*Salva o player*/
@@ -144,8 +144,8 @@ public class Storage extends ComponentBase implements IStorage, Serializable{
             em.getTransaction().commit();
         } catch (EntityExistsException e){
         	/*Erro: player ja existia*/
-        	throw new PreexistingEntityException("Monstro, esse player já existe,\n"
-        										 + "não é possivel criá-lo novamente",e);
+        	throw new PreexistingEntityException("Monstro, esse player jï¿½ existe,\n"
+        										 + "nï¿½o ï¿½ possivel criï¿½-lo novamente",e);
         } catch(PersistenceException ex){
         	/*Erro desconhecido*/
         	String message="";

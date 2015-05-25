@@ -19,7 +19,7 @@ public interface IStorage extends ISupports {
 	 /*recupera um player do bd*/
 	public IPlayer getPlayer(String name) throws ControlledException;
 	/*cria novo player e salva*/
-	public void savePlayer(IPlayer player) throws ControlledException; 
+	public void savePlayer(Object player) throws ControlledException; 
 	/*retorna todos os elementos de certo tipo*/
 	public IElement[] getAllElements(String type); 
 	/*verifica se um player pode escolher certo nome*/

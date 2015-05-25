@@ -1,6 +1,7 @@
 package principal;
 
 import java.util.List;
+import java.util.Scanner;
 
 import javax.persistence.PersistenceException;
 import javax.swing.JOptionPane;
@@ -9,33 +10,33 @@ import model.classes.Building;
 import model.classes.City;
 import model.classes.Player;
 import model.classes.Storage;
+import model.classes.element.Pokemonstro;
 import model.exceptions.ControlledException;
+import model.interfaces.IElement;
 
 public class App {
 	public static void main(String args[]) {
 		Storage storage=new Storage();
-		Player player;
 		try {		
-			player = new Player();
-			//player.setName("mestre2");
-			//storage.savePlayer(player);
-			/*No inicio do jogo, carregar nome dos players para o usuario escolher*/
-			List<String> players = storage.getPossiblePlayers();
-			for(String p:players){
-				/*pegando um player qualquer do bd pelo nome*/
-				player = (Player) storage.getPlayer(p);
-				/*
-				System.out.println(player.getName());
-				City city=player.getCity();
-				
-				System.out.println(city.getName());
-				List<Building> build = city.getInternalbuilding();
-				
-				for(Building builds:build){
-					System.out.println(builds.getName());
-				}*/
-				storage.edit(player);				
+			Scanner teclado = new Scanner(System.in);
+			String linha="";
+			while(!linha.equalsIgnoreCase("fim")){
+				linha=teclado.nextLine();
+				if(!linha.equalsIgnoreCase("fim")){
+					System.out.println(linha);
+					Pokemonstro monstro = new Pokemonstro();
+					monstro.setName(linha);
+					monstro.setLife(100);
+					linha=teclado.nextLine();
+					monstro.setType(linha);
+					storage.savePlayer(monstro);
+				}
 			}
+			teclado.close();
+			/*IElement[] monstros = storage.getAllElements("pokemonstro");
+			for(IElement monstro:monstros){
+				System.out.println(monstro.getName());
+			}*/
 		}catch (ControlledException e) {
 			JOptionPane.showMessageDialog(null, e.getMessage(),
 					  					 "Erro",JOptionPane.ERROR_MESSAGE);
