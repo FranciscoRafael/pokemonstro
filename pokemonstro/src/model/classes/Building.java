@@ -76,6 +76,11 @@ public class Building implements Serializable, IConstruction, IBuilding{
 	public Image getImage() {
 		return new ImageIcon(getClass().getResource("/Images/"+ name + ".png")).getImage();
 	}
+	
+	public Image getInsideImage() {
+		return new ImageIcon(getClass().getResource("/Images/"+ name +"Inside"+ ".png")).getImage();
+	}
+	
 	public Building getExternalBuilding() {
 		return ExternalBuilding;
 	}
