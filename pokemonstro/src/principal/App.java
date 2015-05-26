@@ -33,10 +33,10 @@ public class App {
 				}
 			}
 			teclado.close();
-			/*IElement[] monstros = storage.getAllElements("pokemonstro");
+			IElement[] monstros = storage.getAllElements("pokemonstro");
 			for(IElement monstro:monstros){
 				System.out.println(monstro.getName());
-			}*/
+			}
 		}catch (ControlledException e) {
 			JOptionPane.showMessageDialog(null, e.getMessage(),
 					  					 "Erro",JOptionPane.ERROR_MESSAGE);
