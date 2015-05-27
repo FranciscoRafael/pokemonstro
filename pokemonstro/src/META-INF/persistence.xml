@@ -16,7 +16,7 @@
     <class>model.classes.Inventory_pokemonstro</class>
     <class>model.classes.Inventory_item</class>
     <properties>
-      <property name="javax.persistence.jdbc.url" value="jdbc:hsqldb:file:\db\pokemonstro;shutdown=true"/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:hsqldb:file:db/pokemonstro;shutdown=true"/>
       <property name="javax.persistence.jdbc.password" value=""/>
       <property name="javax.persistence.jdbc.driver" value="org.hsqldb.jdbcDriver"/>
       <property name="javax.persistence.jdbc.user" value="SA"/>

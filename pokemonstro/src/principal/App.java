@@ -18,7 +18,7 @@ public class App {
 	public static void main(String args[]) {
 		Storage storage=new Storage();
 		try {		
-			Scanner teclado = new Scanner(System.in);
+			/*Scanner teclado = new Scanner(System.in);
 			String linha="";
 			while(!linha.equalsIgnoreCase("fim")){
 				linha=teclado.nextLine();
@@ -32,15 +32,19 @@ public class App {
 					storage.savePlayer(monstro);
 				}
 			}
-			teclado.close();
-			IElement[] monstros = storage.getAllElements("pokemonstro");
-			for(IElement monstro:monstros){
-				System.out.println(monstro.getName());
+			teclado.close();*/
+			
+			for (String p : storage.getPossiblePlayers()) {
+				System.out.println(p);
 			}
-		}catch (ControlledException e) {
+			//IElement[] monstros = storage.getAllElements("pokemonstro");
+			//for(IElement monstro:monstros){
+			//	System.out.println(monstro.getName());
+			//}
+		}/*catch (ControlledException e) {
 			JOptionPane.showMessageDialog(null, e.getMessage(),
 					  					 "Erro",JOptionPane.ERROR_MESSAGE);
-		}catch (PersistenceException e){
+		}*/catch (PersistenceException e){
 			JOptionPane.showMessageDialog(null, "Problemas para conectar com o banco de dados",
 										 "Erro",JOptionPane.ERROR_MESSAGE);
 		}

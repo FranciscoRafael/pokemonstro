@@ -34,10 +34,12 @@ public class View extends JPanel {
     }
 
     public void Draw(Graphics2D g2d) {
-    	//camera.setToTranslation(Controller.player.getX(), Controller.player.getY());
+    	camera.setToTranslation(Controller.player.getX(), Controller.player.getY());
     	
-    	/*for (Building b : Controller.city.getInternalbuilding()) {
-			//buildings.setToIdentity();
+    	g2d.drawImage(Controller.city.getImage(), camera, this);
+    	
+    	for (Building b : Controller.city.getInternalbuilding()) {
+			buildings.setToIdentity();
 			buildings.setToTranslation(b.getX(), b.getY());
 	    	camera.concatenate(buildings);
 	    	g2d.drawImage(b.getImage(), camera, null);
@@ -51,8 +53,8 @@ public class View extends JPanel {
 	    	} catch (NoninvertibleTransformException ex) {
 	    		ex.printStackTrace();
 	    	}
-    	}*/
-    	System.out.println(Controller.player.getPlayerImage().getHeight(null)/2);
+    	}
+    	
     	g2d.drawImage(Controller.player.getPlayerImage(), 
     					this.Width/2 - Controller.player.getPlayerImage().getWidth(null)/2,
     					this.Height/2 - Controller.player.getPlayerImage().getHeight(null)/2,

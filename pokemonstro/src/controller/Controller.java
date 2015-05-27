@@ -42,7 +42,7 @@ public class Controller {
     
     //models
     public static IPlayer player;
-    public static City city;
+    public static IConstruction city;
     private Storage storage;
     
     public static GameState getGameState() {
@@ -72,37 +72,44 @@ public class Controller {
 
     private void LoadContent() {
     	try {
-			player.setName("mestre");
-    		player.setX(0);
-    		player.setY(0);
-    		player.setName("player");
-    		player.setDirection("");
+    		player = storage.getPlayer("Player");
+    		System.out.println(player.getName());
     		
-			List<String> players = storage.getPossiblePlayers();
-			for (String p : players) {
-				player = (IPlayer) storage.getPlayer(p);
-				System.out.println(player.getName());
+    		city = player.getCity();
+    		System.out.println(city.getName());
+    		//player.setX(0);
+    		//player.setY(0);
+    		//player.setName("Player");
+    		//player.setDirection("Left");
+    		
+    		//player = (IPlayer) storage.getPlayer("Player");
+    		
+			//List<String> players = storage.getPossiblePlayers();
+			//for (String p : players) {
+				
+				//System.out.println(p);
 				
 				
-				city = player.getCity();
+				//city = player.getCity();
 				//System.out.println(city.getName());
 				//List<Building> build = city.getInternalbuilding();
 				//for(Building builds:build)
-					//System.out.println(builds.getName());*/
-				storage.edit(player);
-			}
+					//System.out.println(builds.getName());
+				//storage.edit(player);
+			//}
+			
 		}catch (ControlledException e) {
 			JOptionPane.showMessageDialog(null, e.getMessage(),
 					  					 "Erro",JOptionPane.ERROR_MESSAGE);
 		}catch (PersistenceException e){
-			JOptionPane.showMessageDialog(null, "Problemas para conectar com o banco de dados",
+			JOptionPane.showMessageDialog(null, "Problemas para conectar com o banco de dados"+e.getMessage(),
 										 "Erro",JOptionPane.ERROR_MESSAGE);
 		}
     }
 
+    
     private void Initialize() {
-    	//player  = new Player();
-    	city    = new City();
+    	//city    = new City();
     	storage = new Storage();
     	this.loadingState = new LoadingState();
     	this.movingState  = new MovingState();
@@ -112,13 +119,17 @@ public class Controller {
     public void UpdateMoving() {
     	
         if (Keyboard.getKeyboardState(KeyEvent.VK_DOWN)) {
-        	player.setY(player.getY() + 10);
-        } else if (Keyboard.getKeyboardState(KeyEvent.VK_UP)) {
         	player.setY(player.getY() - 10);
+        	player.setDirection("sul");
+        } else if (Keyboard.getKeyboardState(KeyEvent.VK_UP)) {
+        	player.setY(player.getY() + 10);
+        	player.setDirection("norte");
         } else if (Keyboard.getKeyboardState(KeyEvent.VK_LEFT)) {
-        	player.setX(player.getX() - 10);
-        } else if (Keyboard.getKeyboardState(KeyEvent.VK_RIGHT)) {
         	player.setX(player.getX() + 10);
+        	player.setDirection("oeste");
+        } else if (Keyboard.getKeyboardState(KeyEvent.VK_RIGHT)) {
+        	player.setX(player.getX() - 10);
+        	player.setDirection("leste");
         }
         
     }
