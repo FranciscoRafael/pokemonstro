@@ -6,6 +6,7 @@ import controller.Keyboard;
 import javax.swing.*;
 
 import model.classes.Building;
+import model.classes.Player;
 
 import java.awt.*;
 import java.awt.event.KeyListener;
@@ -19,8 +20,8 @@ public class View extends JPanel {
 	
 	AffineTransform aff, camera, buildings;
 	
-	public static final int Height = 320;
-	public static final int Width = 480;
+	public static final int Height = 640;
+	public static final int Width = 960;
 	
     public View() {
         this.setDoubleBuffered(true);
@@ -34,7 +35,12 @@ public class View extends JPanel {
     }
 
     public void Draw(Graphics2D g2d) {
-    	camera.setToTranslation(Controller.player.getX(), Controller.player.getY());
+    	camera.setToTranslation((-1)*Controller.player.getX()+this.getWidth()/2  - Controller.player.getPlayerImage().getWidth(null)/2,
+                (-1)*Controller.player.getY()+this.getHeight()/2 - Controller.player.getPlayerImage().getHeight(null)/2);
+    	
+    	//camera.setToTranslation((-1)*Controller.player.getX()+this.getWidth()/2,
+          //    (-1)*Controller.player.getY()+this.getHeight()/2);
+    	
     	
     	g2d.drawImage(Controller.city.getImage(), camera, this);
     	
@@ -43,10 +49,6 @@ public class View extends JPanel {
 			buildings.setToTranslation(b.getX(), b.getY());
 	    	camera.concatenate(buildings);
 	    	g2d.drawImage(b.getImage(), camera, null);
-
-			g2d.drawRect((int)(2*b.getRectangle().getX() - Controller.player.getX() + 225),
-					(int)(2*b.getRectangle().getY() - Controller.player.getY() + 125),
-					2*(int)b.getRectangle().getWidth(), 2*(int)b.getRectangle().getHeight());
 
 	    	try {
 	    		camera.concatenate(buildings.createInverse());

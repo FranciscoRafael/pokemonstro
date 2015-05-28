@@ -1,6 +1,9 @@
 package model.interfaces;
 
 import java.awt.Image;
+import java.awt.Rectangle;
+
+import javax.sound.midi.Receiver;
 
 import model.classes.City;
 import model.exceptions.ControlledException;
@@ -23,8 +26,10 @@ public interface IPlayer extends ISupports{
     public String getDirection();
     
     public City getCity();
+    public void setCity(City city);
     public int getX();
     public int getY();
     public void setX(int x);
     public void setY(int y);
+    public Rectangle getRectangle();
 }

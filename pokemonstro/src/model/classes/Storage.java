@@ -185,4 +185,21 @@ public class Storage extends ComponentBase implements IStorage, Serializable{
 		Query query = em.createQuery("select p.name from Player p", Player.class);		 
         return (List<String>) query.getResultList();
 	}
+	
+	public City getCity(String name)  throws ControlledException {
+		EntityManager em = getEntityManager();
+        try {
+        	/*procura o player*/
+        	Query query = em.createQuery("select c from City c where c.name = :name", 
+        								 Player.class);
+            query.setParameter("name", name);
+            return (City) query.getSingleResult();
+        } catch (NoResultException enfe) {
+        	/*Erro: player nao encontrado*/
+            throw new NonexistentEntityException("Monstro, n�o existe cidade com esse nome.\n"
+            									  + "N�o � poss�vel carreg�-la", enfe);
+		}finally {
+            em.close();
+        }
+	}
 }

@@ -50,7 +50,7 @@ public class Player extends ComponentBase implements Serializable, IPlayer {
     private int y = 0;
     
     public void setCity(City city){
-    	this.city=city;
+    	this.city = city;
     }
     
     public City getCity(){
@@ -133,5 +133,10 @@ public class Player extends ComponentBase implements Serializable, IPlayer {
 	@Override
 	public void setY(int y) {
 		this.y = y;
+	}
+
+	@Override
+	public Rectangle getRectangle() {
+		return new Rectangle(x, y, this.getPlayerImage().getWidth(null), this.getPlayerImage().getHeight(null));
 	}    
 }

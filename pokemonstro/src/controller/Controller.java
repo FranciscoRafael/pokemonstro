@@ -10,6 +10,8 @@ import java.util.List;
 import javax.persistence.PersistenceException;
 import javax.swing.JOptionPane;
 
+import org.eclipse.persistence.internal.libraries.antlr.runtime.RecognitionException;
+
 import model.classes.*;
 import model.interfaces.*;
 import model.exceptions.*;
@@ -24,26 +26,39 @@ import controller.gamestate.State;
  */
 public class Controller {
 
+	//States
     public static GameState gameState = new GameState();
     private State movingState;
     private State loadingState;
     private State menuState;
-
-    /*-------------------------------------------------------------------*/
+    
+    //Movement Collision
+    private boolean ableMoveNorth = true;
+    private boolean ableMoveSouth = true;
+    private boolean ableMoveWest  = true;
+    private boolean ableMoveEast  = true;
+    
+    //Movement
+    private boolean isMoving = false;
+    private long movTime;
+    
+    //Time Loop
     private long gameTime;
     private long lastTime;
     public static final long secInNanosec     = 1000000000L;
     public static final long milisecInNanosec = 1000000L;
-    private final int GAME_FPS = 60;
+    private final int GAME_FPS = 30;
     private final long GAME_UPDATE_PERIOD = secInNanosec / GAME_FPS;
-    /*-------------------------------------------------------------------*/
 
+    //GUI
 	private View gui;
     
     //models
     public static IPlayer player;
     public static IConstruction city;
     private Storage storage;
+    
+    
     
     public static GameState getGameState() {
         return gameState;
@@ -77,26 +92,6 @@ public class Controller {
     		
     		city = player.getCity();
     		System.out.println(city.getName());
-    		//player.setX(0);
-    		//player.setY(0);
-    		//player.setName("Player");
-    		//player.setDirection("Left");
-    		
-    		//player = (IPlayer) storage.getPlayer("Player");
-    		
-			//List<String> players = storage.getPossiblePlayers();
-			//for (String p : players) {
-				
-				//System.out.println(p);
-				
-				
-				//city = player.getCity();
-				//System.out.println(city.getName());
-				//List<Building> build = city.getInternalbuilding();
-				//for(Building builds:build)
-					//System.out.println(builds.getName());
-				//storage.edit(player);
-			//}
 			
 		}catch (ControlledException e) {
 			JOptionPane.showMessageDialog(null, e.getMessage(),
@@ -106,30 +101,103 @@ public class Controller {
 										 "Erro",JOptionPane.ERROR_MESSAGE);
 		}
     }
-
     
     private void Initialize() {
-    	//city    = new City();
     	storage = new Storage();
     	this.loadingState = new LoadingState();
     	this.movingState  = new MovingState();
     	this.menuState    = new MenuState();
+    	movTime = 0;
+    	isMoving = false;
     }
-
+    
+    public void Collision() throws ControlledException {
+    	boolean collided = false;
+    	Rectangle collisionRectangle = null;
+    	
+    	Rectangle leftRectangle  = new Rectangle(player.getX() - 10, player.getY(), 10, 55);
+		Rectangle rightRectangle = new Rectangle(player.getX() + 100, player.getY(), 10, 55);
+		Rectangle upRectangle    = new Rectangle(player.getX(), player.getY() - 20,  20, 10);
+		Rectangle downRectangle  = new Rectangle(player.getX(), player.getY() + 130, 20, 10);
+    	
+    	for (Building b : city.getInternalbuilding()) {
+    		if (leftRectangle.intersects(b.getRectangle()) || rightRectangle.intersects(b.getRectangle()) || 
+    			  upRectangle.intersects(b.getRectangle()) || downRectangle.intersects(b.getRectangle())) {
+	    		System.out.println("Colidiu com " + b.getName());
+	    		if (b.getName().substring(0, 2).equals("to")) {
+	    			//player.setCity(storage.getCity("GymInside"));
+	    		}
+	    		collided = true;
+	    		collisionRectangle = new Rectangle(b.getRectangle());
+	    	}
+    	}
+    	
+    	
+    	ableMoveEast  = true;
+		ableMoveNorth = true;
+		ableMoveSouth = true;
+		ableMoveWest  = true;
+		
+		
+		if (collided) {	
+    		
+    		if (leftRectangle.intersects(collisionRectangle)) {
+				ableMoveWest = false;
+			}
+    		
+    		if (rightRectangle.intersects(collisionRectangle)) {
+				ableMoveEast = false;
+			}
+    		
+    		
+    		if (downRectangle.intersects(collisionRectangle)) {
+				ableMoveSouth = false;
+			}
+    		
+    		if (upRectangle.intersects(collisionRectangle)) {
+				ableMoveNorth = false;
+    		}
+		}
+	}
+    
     public void UpdateMoving() {
     	
         if (Keyboard.getKeyboardState(KeyEvent.VK_DOWN)) {
-        	player.setY(player.getY() - 10);
-        	player.setDirection("sul");
+        	if (ableMoveSouth) {
+        		if (isMoving == false) {
+	        		player.setY(player.getY() + 75);
+	        		player.setDirection("sul");
+	        		movTime = System.currentTimeMillis();
+	        		isMoving = true;
+        		}
+        	}
         } else if (Keyboard.getKeyboardState(KeyEvent.VK_UP)) {
-        	player.setY(player.getY() + 10);
-        	player.setDirection("norte");
+        	if (ableMoveNorth) {
+        		if (isMoving == false) {
+		        	player.setY(player.getY() - 75);
+		        	player.setDirection("norte");
+		        	isMoving = true;
+		        	movTime = System.currentTimeMillis();
+        		}
+        	}
         } else if (Keyboard.getKeyboardState(KeyEvent.VK_LEFT)) {
-        	player.setX(player.getX() + 10);
-        	player.setDirection("oeste");
+        	if (ableMoveWest) {
+        		if (isMoving == false) {
+		        	player.setX(player.getX() - 55);
+		        	player.setDirection("oeste");
+		        	isMoving = true;
+		        	movTime = System.currentTimeMillis();
+        		}
+        	}
         } else if (Keyboard.getKeyboardState(KeyEvent.VK_RIGHT)) {
-        	player.setX(player.getX() - 10);
-        	player.setDirection("leste");
+        	if (ableMoveEast) {
+        		if (isMoving == false) {
+		        	player.setX(player.getX() + 55);
+		        	player.setDirection("leste");
+		        	isMoving = true;
+		        	movTime = System.currentTimeMillis();
+        		}
+        	}
         }
         
     }
@@ -144,7 +212,18 @@ public class Controller {
             if (gameState.getState().getStateString().equals("MOVING")) {
                     gameTime += System.nanoTime() - lastTime;
                     
+                    try {
+                    	Collision();
+                    } catch (ControlledException ex) {
+						ex.printStackTrace();
+					}
+                    
                     UpdateMoving();
+                    if (isMoving) {
+                    	if (System.currentTimeMillis() - movTime > 100) {
+                    		isMoving = false;
+                    	}
+                    }
                     
                     lastTime = System.nanoTime();
             } else if (gameState.getState().getStateString().equals("LOADING")) {

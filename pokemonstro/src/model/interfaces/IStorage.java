@@ -1,5 +1,6 @@
 package model.interfaces;
 
+import model.classes.City;
 import model.classes.Player;
 import model.exceptions.ControlledException;
 import anima.annotation.ComponentInterface;
@@ -24,4 +25,8 @@ public interface IStorage extends ISupports {
 	public IElement[] getAllElements(String type); 
 	/*verifica se um player pode escolher certo nome*/
 	public boolean possibleName(String name); 
+	
+	
+	
+	public City getCity(String name) throws ControlledException;
 }
