@@ -26,20 +26,21 @@ class Carrinho extends Transacao implements IModificaCompra {
     public static Carrinho getInstancia(){
         return instancia;
     }
-    public void comecaCompra(){
-        contexto = EnumContexto.COMPRA;
-        precoCompra = 0;
-        listaProdutosEstoque = new ListaProduto();
-        listaProdutos = new ArrayList<>();
-    }
 
-    public void comecaVenda(){
-        contexto = EnumContexto.VENDA;
-        precoCompra = 0;
-        listaProdutosEstoque = new ListaProduto();
-        listaProdutos = new ArrayList<>();
-    }
+    public void setContexto(EnumContexto contexto) {
+        this.contexto = contexto;
+        if(contexto == EnumContexto.COMPRA) {
+            precoCompra = 0;
+            listaProdutosEstoque = new ListaProduto();
+            listaProdutos = new ArrayList<>();
+        }
+        else {
+            precoCompra = 0;
+            listaProdutosEstoque = new ListaProduto();
+            listaProdutos = new ArrayList<>();
+        }
 
+}
 
 
     public static ItemCompra buscaProdutoEmLista(List<ItemCompra> list, Produto busca) {

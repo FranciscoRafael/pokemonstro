@@ -83,12 +83,12 @@ public class GUILoja extends JFrame implements ILojaGUI{
             Carrinho carrinho = Carrinho.getInstancia();
 
             if (JTabbedPanel.getSelectedIndex() == 1){
-                carrinho.comecaVenda();
+                carrinho.setContexto(EnumContexto.VENDA);
                 ButtonHandlerVenda atualiza = new ButtonHandlerVenda();
                 atualiza.atualizaCarrinho();
             }
             else{
-                carrinho.comecaCompra();
+                carrinho.setContexto(EnumContexto.COMPRA);
                 ButtonHandlerCompra atualiza = new ButtonHandlerCompra();
                 atualiza.atualizaCarrinho();
             }
