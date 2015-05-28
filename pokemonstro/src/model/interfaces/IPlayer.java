@@ -3,8 +3,6 @@ package model.interfaces;
 import java.awt.Image;
 import java.awt.Rectangle;
 
-import javax.sound.midi.Receiver;
-
 import model.classes.City;
 import model.exceptions.ControlledException;
 import anima.annotation.ComponentInterface;

@@ -1,7 +1,6 @@
 package model.interfaces;
 
 import model.classes.City;
-import model.classes.Player;
 import model.exceptions.ControlledException;
 import anima.annotation.ComponentInterface;
 import anima.component.ISupports;

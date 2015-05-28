@@ -31,9 +31,11 @@ public class Building implements Serializable, IConstruction, IBuilding{
     private Integer id;
 	@ManyToOne(cascade=CascadeType.ALL)
 	private City city;
-	@Column(length=50)
+	@Column(length=50, nullable=false)
 	private String name;
+	@Column(nullable=false)
 	private int x;
+	@Column(nullable=false)
 	private int y;
 	@OneToMany(mappedBy="ExternalBuilding")
 	/*lista de construcoes que possui*/

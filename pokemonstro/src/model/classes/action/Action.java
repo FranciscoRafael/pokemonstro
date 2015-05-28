@@ -20,10 +20,11 @@ public class Action extends ComponentBase implements Serializable, IAction{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
-    @Column(length=50)
+    @Column(length=50, nullable=false)
     private String name;
     /* para o efeito, indica, por exemplo, em quanto a vida sera aumentada
      * para o ataque, indica a sua forca*/
+	@Column(nullable=false)
     private int power;
 
     public Integer getId() {

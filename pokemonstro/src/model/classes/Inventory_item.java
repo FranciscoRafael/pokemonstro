@@ -1,7 +1,9 @@
 package model.classes;
 
 import java.io.Serializable;
+
 import javax.persistence.*;
+
 import model.classes.element.Item;
 
 /**
@@ -16,6 +18,7 @@ public class Inventory_item implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     /*quantidade desse item neste inventario*/
+	@Column(nullable=false)
     private Integer qty;
     @ManyToOne(cascade=CascadeType.ALL)
     private Inventory inventory;

@@ -9,10 +9,10 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 
-import anima.annotation.Component;
 import model.classes.Inventory_pokemonstro;
 import model.classes.action.Attack;
 import model.interfaces.IAction;
+import anima.annotation.Component;
 
 /**
  *
@@ -34,8 +34,7 @@ public class Pokemonstro extends Element{
     private List<Inventory_pokemonstro> pokemonstro_inventory;
     @Override
 	public IAction[] getActions() {
-		/*recupera o(s) ataque(s) do item*/
-		return null;
+		return (IAction[]) attack.toArray(new IAction[0]);
 	}
 	@Override
 	public void setAction(IAction action) {

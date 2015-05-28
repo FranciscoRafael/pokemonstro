@@ -6,6 +6,7 @@ import java.awt.Image;
 import java.io.Serializable;
 import java.util.List;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -27,6 +28,7 @@ public class City implements Serializable, IConstruction{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
+	@Column(nullable=false)
     private String name;
     @OneToMany(mappedBy="city")
     /*construcoes da cidade*/

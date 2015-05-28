@@ -1,6 +1,5 @@
 package model.classes.element;
 
-import java.awt.Image;
 import java.io.Serializable;
 
 import javax.persistence.Column;
@@ -26,13 +25,14 @@ public abstract class Element extends ComponentBase implements Serializable, IEl
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
-    @Column(length=50)
+    @Column(length=50, nullable=false)
     private String name;
-    @Column(length=20)
+    @Column(length=20, nullable=false)
     private String type;
-    @Column(length=250)
+    @Column(length=250, nullable=false)
     private String image;
     /*duracao do efeito do item ou vida do pokemonstro*/
+	@Column(nullable=false)
     private int life;
 	
 	public void setId(Integer id) {

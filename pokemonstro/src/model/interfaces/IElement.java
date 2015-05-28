@@ -1,7 +1,5 @@
 package model.interfaces;
 
-import java.awt.Image;
-
 import anima.annotation.ComponentInterface;
 import anima.component.ISupports;
 

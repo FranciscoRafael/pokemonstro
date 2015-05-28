@@ -36,7 +36,7 @@ public class Player extends ComponentBase implements Serializable, IPlayer {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Integer id;
-    @Column(length=50)
+    @Column(length=50, nullable=false)
     private String name;
     @Column(length=20)
     private String position;
@@ -44,9 +44,11 @@ public class Player extends ComponentBase implements Serializable, IPlayer {
     private Inventory inventory;
     @OneToOne(cascade=CascadeType.ALL)
     private City city;
+	@Column(nullable=false)
     private String direction;
-    
+	@Column(nullable=false)    
     private int x = 0;
+	@Column(nullable=false)
     private int y = 0;
     
     public void setCity(City city){
