@@ -1,5 +1,7 @@
 package model.interfaces;
 
+import java.awt.Image;
+
 import anima.annotation.ComponentInterface;
 import anima.component.ISupports;
 
@@ -16,7 +18,7 @@ public interface IElement  extends ISupports{
 	public void setType(String type);
 	public int getLife();
 	public void setLife(int life);
-	//public Image getImage();
+	public Image getImage();
 	//public void setImage(Image image);
 	public IAction[] getActions();
 	public void setAction (IAction action);

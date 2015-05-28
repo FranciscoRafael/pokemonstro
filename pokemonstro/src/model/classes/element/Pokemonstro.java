@@ -8,10 +8,12 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
+import javax.swing.ImageIcon;
 
 import model.classes.Inventory_pokemonstro;
 import model.classes.action.Attack;
 import model.interfaces.IAction;
+import java.awt.Image;
 import anima.annotation.Component;
 
 /**
@@ -39,5 +41,9 @@ public class Pokemonstro extends Element{
 	@Override
 	public void setAction(IAction action) {
 		/*adiciona um ataque*/		
+	}
+	@Override
+	public Image getImage() {
+		return new ImageIcon(getClass().getResource("/pokemonstroImages/"+ super.getType()+"/"+ super.getName() + ".png")).getImage();
 	}
 }

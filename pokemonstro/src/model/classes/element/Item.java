@@ -1,5 +1,6 @@
 package model.classes.element;
 
+import java.awt.Image;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -8,6 +9,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
+import javax.swing.ImageIcon;
 
 import anima.annotation.Component;
 import model.classes.Inventory_item;
@@ -41,5 +43,9 @@ public class Item extends Element{
 	@Override
 	public void setAction(IAction action) {
 		/*adiciona um efeito*/		
+	}
+	@Override
+	public Image getImage() {
+		return new ImageIcon(getClass().getResource("/itemImages/"+ super.getName() + ".png")).getImage();
 	}
 }

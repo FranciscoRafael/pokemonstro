@@ -28,6 +28,11 @@ public class App {
 									   +", Forca: "+ataque.getPower());
 				}
 			}
+			System.out.println("\nItens:");
+			IElement[] itens = storage.getAllElements("Item");
+			for(IElement item:itens){
+				System.out.println(item.getName());
+			}
 		}catch (ControlledException e) {
 			JOptionPane.showMessageDialog(null, e.getMessage(),
 					  					 "Erro",JOptionPane.ERROR_MESSAGE);
