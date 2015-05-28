@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="395.19642857142856" y="916.5">Interfaces.IModificaCompra</node>
+    <node x="272.0" y="1381.0">Classes.ItemCompra</node>
+    <node x="96.86904761904759" y="894.0">Classes.Transacao</node>
+    <node x="0.0" y="101.0">Classes.GUILoja</node>
+    <node x="153.45833333333331" y="771.0">Interfaces.IEfetuaTransacao</node>
+    <node x="859.1964285714286" y="771.0">Classes.ListaProduto</node>
+    <node x="1119.0" y="1381.0">Interfaces.INome</node>
+    <node x="765.0" y="1381.0">Classes.Cliente</node>
+    <node x="673.1964285714286" y="794.0">Interfaces.IInventarioItens</node>
+    <node x="0.0" y="1128.5">Classes.Troca</node>
+    <node x="0.0" y="1381.0">Classes.Produto</node>
+    <node x="673.1964285714286" y="918.0">Classes.ListaProdutoJogador</node>
+    <node x="233.0" y="1062.0">Classes.Carrinho</node>
+    <node x="963.0" y="1381.0">Classes.EnumContexto</node>
+    <node x="591.0" y="1381.0">Classes.EnumProdutos</node>
+    <node x="287.5" y="0.0">Interfaces.ILojaGUI</node>
+    <node x="1075.1964285714284" y="771.0">Classes.PostoTrocaGUI</node>
+    <node x="862.9464285714286" y="918.0">Classes.ListaProdutoLoja</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="Classes.Carrinho" target="Classes.Transacao">
+      <point x="-116.33333333333331" y="-137.0" />
+      <point x="291.1666666666667" y="1037.0" />
+      <point x="234.8690476190476" y="1037.0" />
+      <point x="46.0" y="59.0" />
+    </edge>
+    <edge source="Classes.ListaProdutoLoja" target="Classes.ListaProduto">
+      <point x="41.5" y="-25.5" />
+      <point x="42.75" y="48.5" />
+    </edge>
+    <edge source="Classes.ListaProdutoJogador" target="Interfaces.IInventarioItens">
+      <point x="-41.5" y="-25.5" />
+      <point x="-41.5" y="25.5" />
+    </edge>
+    <edge source="Classes.Carrinho" target="Interfaces.IModificaCompra">
+      <point x="116.33333333333337" y="-137.0" />
+      <point x="523.8333333333334" y="1037.0" />
+      <point x="511.69642857142856" y="1037.0" />
+      <point x="0.0" y="36.5" />
+    </edge>
+    <edge source="Classes.Transacao" target="Interfaces.IEfetuaTransacao">
+      <point x="0.0" y="-59.0" />
+      <point x="188.8690476190476" y="869.0" />
+      <point x="225.45833333333331" y="869.0" />
+      <point x="0.0" y="36.5" />
+    </edge>
+    <edge source="Classes.Troca" target="Classes.Transacao">
+      <point x="53.25" y="-70.5" />
+      <point x="159.75" y="1037.0" />
+      <point x="142.8690476190476" y="1037.0" />
+      <point x="-46.0" y="59.0" />
+    </edge>
+    <edge source="Classes.Troca" target="Interfaces.IEfetuaTransacao">
+      <point x="-53.25" y="-70.5" />
+      <point x="53.25" y="1037.0" />
+      <point x="73.86309523809524" y="1037.0" />
+      <point x="73.86309523809524" y="869.0" />
+      <point x="177.45833333333331" y="869.0" />
+      <point x="-48.0" y="36.5" />
+    </edge>
+    <edge source="Classes.Carrinho" target="Interfaces.IEfetuaTransacao">
+      <point x="0.0" y="-137.0" />
+      <point x="407.5" y="1037.0" />
+      <point x="384.69642857142856" y="1037.0" />
+      <point x="384.69642857142856" y="869.0" />
+      <point x="273.4583333333333" y="869.0" />
+      <point x="48.0" y="36.5" />
+    </edge>
+    <edge source="Classes.GUILoja" target="Interfaces.ILojaGUI">
+      <point x="0.0" y="-312.5" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="Classes.ListaProdutoJogador" target="Classes.ListaProduto">
+      <point x="41.5" y="-25.5" />
+      <point x="797.6964285714286" y="898.0" />
+      <point x="901.9464285714286" y="898.0" />
+      <point x="-42.75" y="48.5" />
+    </edge>
+    <edge source="Classes.ListaProdutoLoja" target="Interfaces.IInventarioItens">
+      <point x="-41.5" y="-25.5" />
+      <point x="904.4464285714286" y="888.0" />
+      <point x="797.6964285714286" y="888.0" />
+      <point x="41.5" y="25.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.43185689948892675" x="886.0" y="617.0" />
+  <SelectedNodes>
+    <node>Classes.EnumContexto</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Properties</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
